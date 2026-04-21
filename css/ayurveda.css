@@ -111,7 +111,7 @@ body {
 /* HERO */
 .hero {
     height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/herobg.png');
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/ayurbg.png');
     background-size: cover;
     background-position: center;
 }
@@ -244,159 +244,155 @@ body {
 
 
 
-/* SECTION */
-.slimming{
-  background:#a65a6a;
-  padding:50px 40px;
-  text-align:center;
+
+
+
+
+
+/* =========================
+   AYURVEDA SECTION
+========================= */
+
+.ayurveda {
+  position: relative;
+  padding: 60px 40px;
+  color: #fff;
+  text-align: center;
+
+  background: url('../images/ayur1.png') center/cover no-repeat;
+  background-attachment: fixed; /* 🔥 PARALLAX */
+}
+
+/* OVERLAY */
+.ayurveda .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(153, 0, 30, 0.75);
+  z-index: 1;
+}
+
+/* CONTENT */
+.ayurveda .content {
+  position: relative;
+  z-index: 2;
 }
 
 /* HEADING */
-.slimming h1{
-  color:#fff;
-  font-size:50px;
-  font-weight:600;
-  margin-bottom:50px;
-  letter-spacing:2px;
+.ayurveda h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* TEXT */
+.top-text,
+.bottom-text {
+  max-width: 1200px;
+  margin: 0 auto 15px;
+  line-height: 1.6;
+  text-align: justify;
+  font-size: 16px;
 }
 
 /* GRID */
-.slim-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:60px;
-  max-width:1200px;
-  margin:auto;
+.ayur-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 }
 
-/* ITEM */
-.item{
-  text-align:center;
+/* CARD */
+.ayu-card {
+  text-align: center;
 }
 
-/* IMAGE CIRCLE */
-.item img{
-  width:220px;
-  height:220px;
-  object-fit:cover;
-  border-radius:50%;
+.ayu-card img {
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-/* TEXT */
-.item p{
-  margin-top:20px;
-  color:#fff;
-  font-weight:600;
-  letter-spacing:1px;
+/* TITLE */
+.ayu-card h3 {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
-/* MOBILE */
-@media(max-width:768px){
+/* CENTER FIX (DESKTOP ONLY) */
+.ayur-grid .bottom:nth-child(4) {
+  grid-column: 1 / 2;
+}
 
-  .slim-grid{
-    grid-template-columns:1fr;
-    gap:40px;
+.ayur-grid .bottom:nth-child(5) {
+  grid-column: 2 / 3;
+}
+
+
+/* =========================
+   TABLET (2 COLUMN)
+========================= */
+@media (max-width: 992px) {
+
+  .ayur-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
 
-  .item img{
-    width:180px;
-    height:180px;
-  }
-
-  .slimming h1{
-    font-size:32px;
+  .ayurveda h1 {
+    font-size: 32px;
   }
 
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.weight-info {
-    background: #8B0023;
-    overflow: hidden;
-    padding: 80px 40px;
-}
-
-/* CONTAINER */
-.weight-container {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-}
-
-/* IMAGE BOX */
-.weight-img {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-}
-
-.weight-img img {
-    width: 100%;
-    max-width: 500px;
-    background: #eee;
-    padding: 40px;
-    border-radius: 6px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* TEXT */
-.weight-text {
-    width: 50%;
-    color: #fff;
-}
-
-.weight-text h2 {
-    font-size: 26px;
-    margin-bottom: 20px;
-}
-
-.weight-text p {
-    font-size: 18px;
-    line-height: 1.8;
-    text-align: justify;
-    margin-bottom: 20px;
-}
+/* =========================
+   MOBILE (1 COLUMN)
+========================= */
 @media (max-width: 768px) {
 
-    .weight-container {
-        flex-direction: column;
-        text-align: center;
-    }
+  .ayurveda {
+    padding: 40px 15px;
 
-    .weight-img,
-    .weight-text {
-        width: 100%;
-    }
+    /* 🔥 IMPORTANT FIX */
+    background-attachment: scroll;
+  }
 
-    .weight-img img {
-        max-width: 300px;
-        padding: 20px;
-    }
+  .ayurveda h1 {
+    font-size: 26px;
+  }
 
-    .weight-text h2 {
-        font-size: 22px;
-        text-align: justify;
-    }
+  .top-text,
+  .bottom-text {
+    font-size: 15px;
+    text-align: justify;
+  }
 
-    .weight-text p {
-        font-size: 15px;
-        text-align: justify;
-    }
+  .ayur-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 30px;
+  }
+
+  .ayu-card img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .ayu-card h3 {
+    font-size: 16px;
+  }
+
+  /* 🔥 REMOVE DESKTOP POSITIONING */
+  .ayur-grid .bottom:nth-child(4),
+  .ayur-grid .bottom:nth-child(5) {
+    grid-column: auto;
+  }
+
 }

@@ -1000,6 +1000,7 @@ body {
   .laser-text,
   .laser-img{
     width:100%;
+    text-align: justify;
   }
 
   .laser-img{
@@ -1086,7 +1087,65 @@ body {
 .ayur-grid .bottom:nth-child(5){
   grid-column:2 / 3;
 }
+/* =========================
+   TABLET (2 COLUMN)
+========================= */
+@media (max-width: 992px) {
 
+  .ayur-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .ayurveda h1 {
+    font-size: 32px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE (1 COLUMN)
+========================= */
+@media (max-width: 768px) {
+
+  .ayurveda {
+    padding: 40px 15px;
+  }
+
+  .ayurveda h1 {
+    font-size: 26px;
+  }
+
+  .top-text,
+  .bottom-text {
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .ayur-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 30px;
+  }
+
+  .ayu-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .ayu-card h3 {
+    font-size: 16px;
+  }
+
+  /* 🔥 REMOVE CENTER HACK (IMPORTANT) */
+  .ayur-grid .bottom:nth-child(4),
+  .ayur-grid .bottom:nth-child(5) {
+    grid-column: auto;
+  }
+
+}
 
 
 
@@ -1485,7 +1544,7 @@ body {
   }
 
   .review-container {
-    overflow-x: auto;
+    overflow-x: hidden;
   }
 
   .review-card {
@@ -1599,7 +1658,7 @@ body {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  width: 99vw;   /* FULL SCREEN WIDTH */
+  width: 150%;   /* FULL SCREEN WIDTH */
   background: #111;
   text-align: center;
   padding: 15px;
@@ -1622,6 +1681,7 @@ body {
 
   .footer {
     padding: 40px 20px;
+    overflow-x: hidden;
   }
 
   .footer-container {

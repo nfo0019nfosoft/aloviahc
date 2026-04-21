@@ -111,7 +111,7 @@ body {
 /* HERO */
 .hero {
     height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/herobg.png');
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../images/hairbg.png');
     background-size: cover;
     background-position: center;
 }
@@ -244,159 +244,155 @@ body {
 
 
 
-/* SECTION */
-.slimming{
-  background:#a65a6a;
-  padding:50px 40px;
-  text-align:center;
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hair {
+  position: relative;
+  padding: 80px 20px;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+
+  /* 🔥 BACKGROUND IMAGE */
+  background: url('../images/hair1bg.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; /* 🔥 IMAGE STAYS FIXED */
 }
 
-/* HEADING */
-.slimming h1{
-  color:#fff;
-  font-size:50px;
-  font-weight:600;
-  margin-bottom:50px;
-  letter-spacing:2px;
+/* 🔥 OVERLAY */
+.hair::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(150, 45, 68, 0.85); /* maroon overlay */
+  z-index: 1;
 }
 
-/* GRID */
-.slim-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:60px;
-  max-width:1200px;
-  margin:auto;
+/* 🔥 CONTENT ABOVE OVERLAY */
+.hair * {
+  position: relative;
+  z-index: 2;
 }
 
-/* ITEM */
-.item{
-  text-align:center;
+.hair h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
-/* IMAGE CIRCLE */
-.item img{
-  width:220px;
-  height:220px;
-  object-fit:cover;
-  border-radius:50%;
+.descp {
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  color:white;
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 16px;
 }
 
-/* TEXT */
-.item p{
-  margin-top:20px;
-  color:#fff;
-  font-weight:600;
-  letter-spacing:1px;
+/* GRID SETUP */
+.hair-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 40px 80px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-
-  .slim-grid{
-    grid-template-columns:1fr;
-    gap:40px;
-  }
-
-  .item img{
-    width:180px;
-    height:180px;
-  }
-
-  .slimming h1{
-    font-size:32px;
-  }
-
+/* ITEM STYLE */
+.hair-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Aligns text and image toward center */
+  gap: 20px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.weight-info {
-    background: #8B0023;
-    overflow: hidden;
-    padding: 80px 40px;
+/* For items where image is on the left (Hair Transplantation / Loss) */
+.reverse {
+  justify-content: flex-start;
 }
 
-/* CONTAINER */
-.weight-container {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
+.hair-item p {
+  width: 45%;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right; /* Text on left points right */
 }
 
-/* IMAGE BOX */
-.weight-img {
-    width: 50%;
-    display: flex;
-    justify-content: center;
+.reverse p {
+  text-align: left; /* Text on right points left */
 }
 
-.weight-img img {
-    width: 100%;
-    max-width: 500px;
-    background: #eee;
-    padding: 40px;
-    border-radius: 6px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+.hair-item img {
+  width: 240px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 2px solid #fff;
+}
+/* 🔥 LAST ITEM FIX - DANDRUFF LEFT TEXT, RIGHT IMAGE */
+.last {
+  grid-column: 1 / -1;      /* Full width spanning both columns */
+  display: flex;
+  flex-direction: row;      /* Row layout (Text Left, Image Right) */
+  align-items: center;
+  justify-content: center;  /* Centers the whole block */
+  gap: 20px;
+  margin-top: 20px;
 }
 
-/* TEXT */
-.weight-text {
-    width: 50%;
-    color: #fff;
+.last p {
+  width: auto;              /* Text size auto */
+  text-align: left;        /* Text right aligned to sit next to image */
+  margin-bottom: 0;         /* Remove bottom margin */
 }
 
-.weight-text h2 {
-    font-size: 26px;
-    margin-bottom: 20px;
+.last img {
+  width: 240px;             /* Image size */
+  align-self: center;
 }
 
-.weight-text p {
-    font-size: 18px;
-    line-height: 1.8;
-    text-align: justify;
-    margin-bottom: 20px;
-}
+/* RESPONSIVE - Stack everything on mobile */
 @media (max-width: 768px) {
-
-    .weight-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .weight-img,
-    .weight-text {
-        width: 100%;
-    }
-
-    .weight-img img {
-        max-width: 300px;
-        padding: 20px;
-    }
-
-    .weight-text h2 {
-        font-size: 22px;
-        text-align: justify;
-    }
-
-    .weight-text p {
-        font-size: 15px;
-        text-align: justify;
-    }
+  .hair-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hair-item, .reverse {
+    flex-direction: column !important;
+    text-align: center;
+  }
+  
+  .hair-item p {
+    width: 100%;
+    text-align: center;
+    .last {
+    flex-direction: column !important; /* Mobile lo okati kinda okati vastundi */
+    text-align: center;
+  }
+  .last p {
+    text-align: center;
+  }
 }
+  }
+
+
+
+
+
+
+
+
+
+

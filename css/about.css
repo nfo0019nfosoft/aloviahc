@@ -211,19 +211,23 @@ body {
         transform: rotate(180deg);
     }
 
-    /* 🔥 HERO FIX (FULL IMAGE VISIBLE) */
-    .hero {
-        height: 55vh;
-        background-size: contain;   /* KEY CHANGE */
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: #000;     /* fills empty space */
-    }
+    
 }
 
 
 
+@media (max-width: 992px) {
 
+    .hero {
+        height: auto;              /* 🔥 remove fixed height */
+        aspect-ratio: 16/9;        /* maintain proper shape */
+        background-size: contain;  /* full image */
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-color: #800020;
+    }
+
+}
 
 
 

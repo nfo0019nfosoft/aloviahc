@@ -1,0 +1,458 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    LASER</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/laser.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Alovia Logo">
+      </div>
+
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+
+          <li class="has-sub">
+            <a href="about.html">ABOUT US <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="reviews.html">REVIEWS</a></li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="slimming.html">SLIMMING <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li class="has-sub">
+                <a href="#">SLIMMING <span class="arrow"></span></a>
+
+                <ul class="sub-menu">
+                  <li><a href="weight-loss.html">WEIGHT LOSS MANAGEMENT</a></li>
+                  <li><a href="fat-loss.html">FAT LOSS</a></li>
+                  <li><a href="figure-correction.html">FIGURE CORRECTION</a></li>
+                  <li><a href="body-contouring.html">BODY CONTOURING</a></li>
+                  <li><a href="muscle-toning.html">MUSCLE TONING AND FIRMING</a></li>
+                  <li><a href="diet-advice.html">HEALTHY DIET ADVISE</a></li>
+                  <li><a href="why-choose.html">WHY CHOOSE ALOVIA FOR WEIGHT MANAGEMENT</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="skin.html">SKIN <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li class="has-sub">
+                <a href="#">SKIN <span class="arrow"></span></a>
+
+                <ul class="sub-menu">
+                  <li><a href="acne-pimple.html">ACNE/PIMPLE TREATMENT</a></li>
+                  <li><a href="acne-scar.html">ACNE SCAR TREATMENT</a></li>
+                  <li><a href="dark-circles.html">DARK CIRCLES (Under Eye) TREATMENT</a></li>
+                  <li><a href="pigmentation.html">PIGMENTATION TREATMENT</a></li>
+                  <li><a href="skin-lightening.html">SKIN LIGHTENING TREATMENT</a></li>
+                  <li><a href="anti-ageing.html">ANTI AGEING TREATMENT</a></li>
+                  <li><a href="led-light.html">LED LIGHT TREATMENT</a></li>
+                  <li><a href="stretch-marks.html">STRETCH MARK TREATMENT</a></li>
+                  <li><a href="fine-lines.html">FINE LINES & WRINKLE TREATMENT</a></li>
+                  <li><a href="tattoo-removal.html">TATTOO REMOVAL</a></li>
+                  <li><a href="mole-wart.html">MOLE AND WART REMOVAL</a></li>
+                  <li><a href="medi-facial.html">MEDI-FACIAL</a></li>
+                  <li><a href="semi-permanent-makeup.html">SEMI-PERMANENT MAKE-UP TREATMENT (Micro-Blading)</a></li>
+                  <li><a href="permanent-makeup.html">PERMANENT MAKE-UP TREATMENT (BB-Glow)</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="hair.html">HAIR <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="prp.html">PRP</a></li>
+              <li><a href="hair-transplant.html">HAIR TRANSPLANTATION</a></li>
+              <li><a href="hair-regrowth.html">HAIR REGROWTH TREATMENT</a></li>
+              <li><a href="hair-loss.html">HAIR LOSS TREATMENT</a></li>
+              <li><a href="dandruff.html">DANDRUFF</a></li>
+            </ul>
+          </li>
+
+          <li><a href="laser.html">LASER</a></li>
+
+          <li class="has-sub">
+            <a href="ayurveda.html">AYURVEDA <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="panchakarma.html">PANCHAKARMA</a></li>
+              <li><a href="soundarya-vardhini.html">SOUNDARYA VARDHINI</a></li>
+              <li><a href="specialities.html">SPECIALITIES</a></li>
+              <li><a href="diseases.html">DISEASES</a></li>
+              <li><a href="d-stress.html">D-STRESS</a></li>
+            </ul>
+          </li>
+
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="payment.html">PAYMENT</a></li>
+        </ul>
+      </nav>
+
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+  </section>
+
+  <script>
+    // Toggle Mobile Menu
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navbar = document.querySelector(".navbar");
+
+    menuToggle.onclick = () => {
+      navbar.classList.toggle("active");
+      // Change icon from bars to X
+      const icon = menuToggle.querySelector("i");
+      icon.classList.toggle("fa-bars");
+      icon.classList.toggle("fa-times");
+    };
+
+    // Handle Mobile Dropdowns
+    document.querySelectorAll(".has-sub > a").forEach(link => {
+      link.addEventListener("click", function (e) {
+        if (window.innerWidth <= 992) {
+          e.preventDefault(); // Stop from navigating if it has a submenu
+          const parent = this.parentElement;
+          parent.classList.toggle("open");
+        }
+      });
+    });
+  </script>
+
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+  duration: 1000,
+  once: true
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="laser-info">
+
+  <div class="laser-grid">
+
+    <!-- LEFT BOX -->
+    <div class="laser-box" data-aos="fade-right">
+      <h2>About Laser Hair Removal</h2>
+      <p>
+        The removal of unwanted body hair is often part of our daily routines. 
+        Shaving, waxing, plucking, and other methods are all commonplace. For
+         people who no longer want these activities to be part of their everyday 
+         life, or who have unwanted hair in places it may be difficult to get rid of, 
+         laser hair removal offers a way to see long lasting and frequently permanent results.
+      </p>
+    </div>
+
+    <!-- RIGHT BOX -->
+    <div class="laser-box" data-aos="fade-left">
+      <h2>How Does Laser Hair Removal Work?</h2>
+      <p>
+       Laser hair removal uses concentrated beams of light to prevent hair follicles from growing hair. Like many other laser procedures, it relies on melanin. During treatment, the laser’s light beams are absorbed by the pigment in your hair. It targets the hair follicles via the melanin produced in your hair.
+      </p>
+
+      <p>
+Once it reaches the hair follicle, the light energy is converted into heat where it damages the follicles to inhibit future hair growth. Laser removal requires multiple sessions to target your hair at all stages of growth. As an example, at your first session, only a portion of hair follicles are treated because hair follicles can lay dormant for weeks. Hair follicles alternate on which produce hair and which do not. This explains why multiple sessions are required for the best results.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+<section class="treatment">
+
+  <!-- HEADING -->
+  <h1 data-aos="fade-up">Treatment Areas</h1>
+
+  <!-- DESCRIPTION -->
+  <p class="desc" data-aos="fade-up" data-aos-delay="100">
+    Laser hair removal is safe and effective nearly anywhere you have unwanted hair, including the face and bikini area. Among the treatment areas of Face & Body include
+  </p>
+
+  <div class="treatment-grid">
+
+    <!-- ROW 1 -->
+    <div class="card" data-aos="fade-up" data-aos-delay="0">
+      <img src="images/l1.png" alt="">
+      <div class="label">CHIN</div>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <img src="images/l2.png" alt="">
+      <div class="label">UPPER LIP</div>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
+      <img src="images/l3.png" alt="">
+      <div class="label">LOWER LIP</div>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="300">
+      <img src="images/l4.png" alt="">
+      <div class="label">NECK</div>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="card" data-aos="fade-up" data-aos-delay="0">
+      <img src="images/l5.png" alt="">
+      <div class="label">UNDERARM</div>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <img src="images/l6.png" alt="">
+      <div class="label">CHEEKS</div>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
+      <img src="images/l7.png" alt="">
+      <div class="label">FEET</div>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="300">
+      <img src="images/l8.png" alt="">
+      <div class="label">BIKINI</div>
+    </div>
+
+    <!-- ROW 3 -->
+    <div class="card" data-aos="fade-up" data-aos-delay="0">
+      <img src="images/l9.png" alt="">
+      <div class="label">FULL ARMS</div>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <img src="images/l10.png" alt="">
+      <div class="label">LOWER LEG</div>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
+      <img src="images/l11.png" alt="">
+      <div class="label">UPPER LEG</div>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="300">
+      <img src="images/l12.png" alt="">
+      <div class="label">LOWER BACK</div>
+    </div>
+
+    <!-- ROW 4 -->
+    <div class="card" data-aos="fade-up" data-aos-delay="0">
+      <img src="images/l12.png" alt="">
+      <div class="label">UPPER BACK</div>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <img src="images/l13.png" alt="">
+      <div class="label">LOWER ABDOMEN</div>
+    </div>
+
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
+      <img src="images/l14.png" alt="">
+      <div class="label">CHEST</div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="benefits" data-aos="fade-up">
+
+  <div class="benefits-container">
+
+    <p>
+    Other treatment areas are possible depending on your goals. Based on the size of the treatment areas, you may also be able to undergo the procedure for multiple areas during the same sessions.
+    </p>
+
+    <h3>Benefits Of Hair Removal</h3>
+
+    <p>
+      Laser hair removal comes with many notable benefits. Not only can it provide lasting hair removal, but it also can save you money and time in the long run.
+    </p>
+
+    <h4>Benefits of laser hair removal can include:</h4>
+
+    <ul>
+      <li>Removal of unwanted hair</li>
+      <li>Long lasting and often permanent</li>
+      <li>Discontinuation of shaving and waxing</li>
+      <li>No longer needing to buy razors or other hair removal products</li>
+      <li>Prevents ingrown hairs</li>
+      <li>Cessation of side effects from shaving like razor bumps</li>
+      <li>Low risk procedure</li>
+      <li>Hypoallergenic</li>
+      <li>Procedure usually takes no more than an hour</li>
+      <li>Scarring extremely rare</li>
+      <li>Benefits in transgender transition and can alleviate gender dysphoria for some patients (especially male to female)</li>
+      <li>Little to no pain with long lasting results</li>
+    </ul>
+
+    <p>
+If you are an ideal candidate, our expert doctor will create a customized treatment plan. This will likely include the treatment areas, the initial number of sessions, and anything specific to your laser hair removal You will also receive a price quote personalized to the number of areas and sessions.
+    </p>
+
+    <h4>The Procedure:</h4>
+
+    <p>
+      You usually do not find treatment overly painful. You may feel some pinching and heat, but nothing too painful. Depending on the size of the treatment area and the number of areas, laser hair removal can take anywhere from 20 minutes to one hour or more.
+    </p>
+
+    <h4>Aftercare:</h4>
+
+    <p>
+      After laser hair removal at ALOVIA our expert doctor will give you instructions on how to care for your skin to promote the best results. Instructions may include:
+    </p>
+
+    
+      <p>Avoid exercise, hot showers, saunas, or anything that may cause you to sweat or get hot for around 24 hours after treatment</p>
+      <p>Do not go out in the sun and wear sunscreen</p>
+      <p>Gently exfoliate after about five days</p>
+      <p>Attend your next sessions</p>
+    
+
+    <h4>At Home vs. Professional Laser Hair Removal</h4>
+
+    <p>
+  A variety of at home laser removal devices and kits are available. They are initially tempting because it allows you to do it yourself at home. Are these devices effective? Are they safe?
+    </p>
+
+    <p>
+      The answer to both of these questions is no. Lasers sold in stores for hair removal often are not as strong or customizable as professional lasers. While they may come with a few settings, every person receives the same treatment. With professional laser hair removal, the laser settings are personalized to fit you. This reduces the risks of burns and promotes the best results.
+    </p>
+
+    <p>
+     Also, at-home laser devices run the risk of burns or permanent skin damage. Master estheticians are trained in laser procedures, including hair removal. Their skill reduces the chances of burns or other risks.
+    </p>
+
+    <!-- 🔥 FAQ START -->
+    <div class="faq">
+
+      <h3>FAQs:-</h3>
+
+      <div class="faq-container">
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Who Is A Good Candidate?
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            Laser hair removal is suitable for most people with unwanted hair.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            How Many Sessions Will I Need?
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            Typically 6–8 sessions depending on hair growth cycle.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Does Laser Hair Removal Work On Blonde Hair?
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            It works best on darker hair. Blonde hair may need special treatment.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Is It Safe For Darker Skin Tones?
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            Yes, modern lasers are safe when performed by experts.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- 🔥 FAQ END -->
+
+  </div>
+
+</section>
+
+
+
+<script>
+document.querySelectorAll(".faq-question").forEach(q => {
+  q.addEventListener("click", () => {
+
+    const item = q.parentElement;
+
+    // close others
+    document.querySelectorAll(".faq-item").forEach(i => {
+      if(i !== item) i.classList.remove("active");
+    });
+
+    // toggle current
+    item.classList.toggle("active");
+
+  });
+});
+</script>
