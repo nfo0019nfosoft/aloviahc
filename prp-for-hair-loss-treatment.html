@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADVANCE PRP FOR HAIR LOSS TREATMENT </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/prp.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Alovia Logo">
+      </div>
+
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+
+          <li class="has-sub">
+            <a href="about.html">ABOUT US <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="review.html">REVIEWS</a></li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+               <a href="slimming.html">SLIMMING <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li class="has-sub">
+               
+
+                <ul class="sub-menu">
+                  <li><a href="weight-loss-management.html">WEIGHT LOSS MANAGEMENT</a></li>
+                  <li><a href="fat-loss.html">FAT LOSS</a></li>
+                  <li><a href="figure-correction.html">FIGURE CORRECTION</a></li>
+                  <li><a href="body-contouring.html">BODY CONTOURING</a></li>
+                  <li><a href="muscle-toning-and-firming.html">MUSCLE TONING AND FIRMING</a></li>
+                  <li><a href="healthy-diet-advice.html">HEALTHY DIET ADVISE</a></li>
+                  <li><a href= "why-choose-alovia-for-weight-management.html">WHY CHOOSE ALOVIA FOR WEIGHT MANAGEMENT</a></li>
+
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="skin.html">SKIN <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+             
+
+                <ul class="sub-menu">
+                  <li><a href="acne-pimple-treatment.html">ACNE/PIMPLE TREATMENT</a></li>
+                  <li><a href="acne-scar-treatment.html">ACNE SCAR TREATMENT</a></li>
+                  <li><a href="dark-circles-treatment.html">DARK CIRCLES (Under Eye) TREATMENT</a></li>
+                  <li><a href="pigmentation-treatment.html">PIGMENTATION TREATMENT</a></li>
+                  <li><a href="skin-lightening-treatment.html">SKIN LIGHTENING TREATMENT</a></li>
+                  <li><a href="anti-ageing-treatment.html">ANTI AGEING TREATMENT</a></li>
+                  <li><a href="led-light-treatment.html">LED LIGHT TREATMENT</a></li>
+                  <li><a href="stretch-marks-treatment.html">STRETCH MARK TREATMENT</a></li>
+                  <li><a href="fine-lines-winkle-treatment.html">FINE LINES & WRINKLE TREATMENT</a></li>
+                  <li><a href="tattoo-removal.html">TATTOO REMOVAL</a></li>
+                  <li><a href="mole-wart-removal.html">MOLE AND WART REMOVAL</a></li>
+                  <li><a href="medi-facial.html">MEDI-FACIAL</a></li>
+                  <li><a href="semi-permanent-makeup-treatment.html">SEMI-PERMANENT MAKE-UP TREATMENT (Micro-Blading)</a></li>
+                  <li><a href="permanent-makeup-treatment.html">PERMANENT MAKE-UP TREATMENT (BB-Glow)</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="hair.html">HAIR <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="prp-for-hair-loss-treatment.html">Adavnce PRP For Hair Loss Treatment</a></li>
+              <li><a href="hair-regrowth-treatment.html">HAIR REGROWTH TREATMENT</a></li>
+              <li><a href="hair-transplantation.html">HAIR TRANSPLANTATION</a></li>
+              <li><a href="hair-loss-treatment.html">HAIR LOSS TREATMENT</a></li>
+              <li><a href="dandruff.html">DANDRUFF</a></li>
+            </ul>
+          </li>
+
+          <li><a href="laser.html">LASER</a></li>
+
+          <li class="has-sub">
+            <a href="ayurveda.html">AYURVEDA <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="panchakarma.html">PANCHAKARMA</a></li>
+              <li><a href="soundarya-vardhini.html">SOUNDARYA VARDHINI</a></li>
+              <li><a href="specialities.html">SPECIALITIES</a></li>
+              <li><a href="diseases.html">DISEASES</a></li>
+              <li><a href="d-stress.html">D-STRESS</a></li>
+            </ul>
+          </li>
+ <li><a href="physiotherapy.html">PHYSIOTHERAPY</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="payment.html">PAYMENT</a></li>
+        </ul>
+      </nav>
+
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  
+  <section class="hero">
+  </section>
+
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navbar = document.querySelector(".navbar");
+
+    menuToggle.onclick = () => {
+      navbar.classList.toggle("active");
+      const icon = menuToggle.querySelector("i");
+      icon.classList.toggle("fa-bars");
+      icon.classList.toggle("fa-times");
+    };
+
+    document.querySelectorAll(".has-sub > a").forEach(link => {
+      link.addEventListener("click", function (e) {
+        if (window.innerWidth <= 992) {
+          e.preventDefault();
+          const parent = this.parentElement;
+          parent.classList.toggle("open");
+        }
+      });
+    });
+  </script>
+
+
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+  duration: 1000,
+  once: true
+});
+</script>
+
+
+
+
+<section class="pr-section">
+
+  <div class="pr-overlay">
+
+    <div class="pr-container">
+
+      <!-- HEADING -->
+      <h1 data-aos="fade-up">PRP HAIR LOSS TREATMENT</h1>
+
+      <div class="pr-content">
+
+        <!-- LEFT TEXT -->
+        <div class="pr-text" data-aos="fade-up">
+
+          <p>
+           PRP (platelet-rich plasma) therapy for hair loss is a three-step medical treatment in which a person’s blood is drawn, processed, and then injected into the scalp.
+          </p>
+
+          <p>
+            Some in the medical community think that PRP injections trigger natural hair growth and maintain it by increasing blood supply to the hair follicle and increasing the thickness of the hair shaft. Sometimes this approach is combined with other hair loss procedures or medications.
+          </p>
+
+          <p>
+There hasn’t been enough research to prove if PRP is an effective hair loss treatment. However, PRP therapy has been in use since the 1980s. It’s been used for problems such as healing injured tendons, ligaments, and muscles
+          </p>
+
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="pr-image" data-aos="fade-up" data-aos-delay="150">
+          <img src="images/prp.png" alt="">
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section class="prp-section">
+  <div class="prp-container prp">
+
+    <p data-aos="fade-up">
+      To understand how PRP works, it is important to be aware of the role that platelets play in healing.
+    </p>
+
+    <p data-aos="fade-up" data-aos-delay="50">
+     Platelets are a component of blood, along with red and white blood cells. When a person sustains a cut or wound, the platelets are some of the body’s “first responders” that arrive to stop the bleeding and promote healing.
+    </p>
+
+    <p data-aos="fade-up" data-aos-delay="100">
+Researchers theorized that if they could extract concentrated platelets and inject them into damaged areas of the body, they could accelerate healing.
+    </p>
+
+    <p data-aos="fade-up" data-aos-delay="150">
+To produce PRP, a medical professional will take a blood sample and put it into a machine called a centrifuge. This machine spins at a rapid rate, which separates the components of the blood. The medical professional then extracts the platelets for injection.
+    </p>
+
+    <h3 data-aos="fade-up">The Process</h3>
+
+    <p data-aos="fade-up">
+     As with most procedures, there is a careful process involved in using PRP for hair regrowth, beginning with a standard blood draw from the patient’s arm. Next, Zeichner says, “The tube of blood is put into a machine called a centrifuge, which spins the blood tube to separate out the red blood cells from the plasma.” The plasma, which is rich in platelets, is then injected directly into the scalp at the level of the hair follicles.
+    </p>
+
+    <p data-aos="fade-up" data-aos-delay="100">
+The process is meticulous — with injections beginning across the scalp, approximately at every half inch over the area of thinning hair — but typically, the entire procedure takes less than a half-hour.
+    </p>
+
+    <h3 data-aos="fade-up">Who Should Not Go For PRP Treatment?</h3>
+<p>PRP hair treatment procedure is not suitable for the following people–</p>
+    <ul data-aos="fade-up">
+      <li>Heavy smokers</li>
+      <li>
+       Those diagnosed with medical disorders such as platelet dysfunction syndromes, thrombocytopenias, hypofibrinogenaemia, hemodynamic instability, sepsis, acute infections, chronic liver disease and cancer should avoid opting for PRP. It is also not advisable for those undergoing anti coagulation therapy and those on blood thinners.
+      </li>
+    </ul>
+
+    <h2 data-aos="fade-up">FAQs:</h2>
+
+    <div class="faq" data-aos="fade-up">
+
+      <div class="faq-item">
+        <button class="faq-question">What Are the Benefits of PRP for Hair Loss?</button>
+        <div class="faq-answer">
+          <p>PRP improves blood supply, strengthens hair follicles, and promotes natural regrowth.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Can PRP regrow hair?</button>
+        <div class="faq-answer">
+          <p>Yes, PRP can activate dormant follicles and support new hair growth.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Does PRP really stop hair loss?</button>
+        <div class="faq-answer">
+          <p>It helps slow hair loss and improves hair density over time.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<script>
+;
+
+// FAQ toggle
+document.querySelectorAll(".faq-question").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const item = btn.parentElement;
+
+    document.querySelectorAll(".faq-item").forEach(i => {
+      if (i !== item) i.classList.remove("active");
+    });
+
+    item.classList.toggle("active");
+  });
+});
+</script>
+
+</body>
+</html>

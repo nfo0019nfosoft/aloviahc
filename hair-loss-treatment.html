@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAIR LOSS TREATMENT </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/hairloss.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Alovia Logo">
+      </div>
+
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+
+          <li class="has-sub">
+            <a href="about.html">ABOUT US <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="review.html">REVIEWS</a></li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+               <a href="slimming.html">SLIMMING <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li class="has-sub">
+               
+
+                <ul class="sub-menu">
+                  <li><a href="weight-loss-management.html">WEIGHT LOSS MANAGEMENT</a></li>
+                  <li><a href="fat-loss.html">FAT LOSS</a></li>
+                  <li><a href="figure-correction.html">FIGURE CORRECTION</a></li>
+                  <li><a href="body-contouring.html">BODY CONTOURING</a></li>
+                  <li><a href="muscle-toning-and-firming.html">MUSCLE TONING AND FIRMING</a></li>
+                  <li><a href="healthy-diet-advice.html">HEALTHY DIET ADVISE</a></li>
+                  <li><a href= "why-choose-alovia-for-weight-management.html">WHY CHOOSE ALOVIA FOR WEIGHT MANAGEMENT</a></li>
+
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="skin.html">SKIN <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+             
+
+                <ul class="sub-menu">
+                  <li><a href="acne-pimple-treatment.html">ACNE/PIMPLE TREATMENT</a></li>
+                  <li><a href="acne-scar-treatment.html">ACNE SCAR TREATMENT</a></li>
+                  <li><a href="dark-circles-treatment.html">DARK CIRCLES (Under Eye) TREATMENT</a></li>
+                  <li><a href="pigmentation-treatment.html">PIGMENTATION TREATMENT</a></li>
+                  <li><a href="skin-lightening-treatment.html">SKIN LIGHTENING TREATMENT</a></li>
+                  <li><a href="anti-ageing-treatment.html">ANTI AGEING TREATMENT</a></li>
+                  <li><a href="led-light-treatment.html">LED LIGHT TREATMENT</a></li>
+                  <li><a href="stretch-marks-treatment.html">STRETCH MARK TREATMENT</a></li>
+                  <li><a href="fine-lines-winkle-treatment.html">FINE LINES & WRINKLE TREATMENT</a></li>
+                  <li><a href="tattoo-removal.html">TATTOO REMOVAL</a></li>
+                  <li><a href="mole-wart-removal.html">MOLE AND WART REMOVAL</a></li>
+                  <li><a href="medi-facial.html">MEDI-FACIAL</a></li>
+                  <li><a href="semi-permanent-makeup-treatment.html">SEMI-PERMANENT MAKE-UP TREATMENT (Micro-Blading)</a></li>
+                  <li><a href="permanent-makeup-treatment.html">PERMANENT MAKE-UP TREATMENT (BB-Glow)</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="hair.html">HAIR <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="prp-for-hair-loss-treatment.html">Adavnce PRP For Hair Loss Treatment</a></li>
+              <li><a href="hair-regrowth-treatment.html">HAIR REGROWTH TREATMENT</a></li>
+              <li><a href="hair-transplantation.html">HAIR TRANSPLANTATION</a></li>
+              <li><a href="hair-loss-treatment.html">HAIR LOSS TREATMENT</a></li>
+              <li><a href="dandruff.html">DANDRUFF</a></li>
+            </ul>
+          </li>
+
+          <li><a href="laser.html">LASER</a></li>
+
+          <li class="has-sub">
+            <a href="ayurveda.html">AYURVEDA <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="panchakarma.html">PANCHAKARMA</a></li>
+              <li><a href="soundarya-vardhini.html">SOUNDARYA VARDHINI</a></li>
+              <li><a href="specialities.html">SPECIALITIES</a></li>
+              <li><a href="diseases.html">DISEASES</a></li>
+              <li><a href="d-stress.html">D-STRESS</a></li>
+            </ul>
+          </li>
+ <li><a href="physiotherapy.html">PHYSIOTHERAPY</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="payment.html">PAYMENT</a></li>
+        </ul>
+      </nav>
+
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  
+  <section class="hero">
+  </section>
+
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navbar = document.querySelector(".navbar");
+
+    menuToggle.onclick = () => {
+      navbar.classList.toggle("active");
+      const icon = menuToggle.querySelector("i");
+      icon.classList.toggle("fa-bars");
+      icon.classList.toggle("fa-times");
+    };
+
+    document.querySelectorAll(".has-sub > a").forEach(link => {
+      link.addEventListener("click", function (e) {
+        if (window.innerWidth <= 992) {
+          e.preventDefault();
+          const parent = this.parentElement;
+          parent.classList.toggle("open");
+        }
+      });
+    });
+  </script>
+
+
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+  duration: 1000,
+  once: true
+});
+</script>
+
+
+
+
+
+<section class="hairtreatment-section">
+
+  <div class="hairtreatment-container">
+
+    <h1 data-aos="fade-up">HAIR LOSS TREATMENT</h1>
+
+    <div class="hairtreatment-content">
+
+      <!-- LEFT TEXT -->
+      <div class="hairtreatment-text">
+
+        <p data-aos="fade-up">
+         Hair grows everywhere on the human skin except, on places like the palms of our hands and the soles of our feet, our eyelids and belly buttons, but many hairs are so fine they’re virtually invisible
+        </p>
+
+        <p data-aos="fade-up">
+          Hair is made of a protein called keratin that is produced in hair follicles in the outer layer of skin. As follicles produce new hair cells, old cells are being pushed out through the surface of the skin at the rate of about 6 inches a year. The hair you can see is actually a string of dead keratin cells. The average adult head has about 100,000 to 150,000 hairs and loses up to 100 of them a day; finding a few stray hairs on your hairbrush is not necessarily cause for alarm
+        </p>
+
+        <p data-aos="fade-up">
+At any time, about 90% of the hair on a person’s scalp is growing. Each follicle has its own life cycle that can be influenced by age, disease, and a wide variety of other factors.
+        </p>
+
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="hairtreatment-image" data-aos="fade-up">
+        <img src="images/hairloss.png" alt="Hair Treatment">
+      </div>
+
+    </div>
+
+    <!-- LIST -->
+    <div class="hairtreatment-list">
+
+      <p data-aos="fade-up">This life cycle is divided into three phases:</p>
+
+      <ul data-aos="fade-up">
+        <li>Anagen: active hair growth that generally lasts between 2 to 8 years</li>
+        <li>Catagen: transitional hair growth that lasts 2 to 3 weeks</li>
+        <li>Telogen: resting phase that lasts about 2 to 3 months; at the end of the resting phase the hair is shed and a new hair replaces it, and the growing cycle starts again.</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="alopecia-section">
+
+  <div class="alopecia-container">
+
+    <p data-aos="fade-up">
+      There are many types of hair loss, also called alopecia:
+    </p>
+
+    <ul data-aos="fade-up">
+      <li><b>Involutional alopecia</b>is a natural condition in which the hair gradually thins with age. More hair follicles go into the resting phase, and the remaining hairs become shorter and fewer in number.</li>
+      <li><b>Androgenic alopecia</b> is a genetic condition that can affect both men and women. Men with this condition, called male pattern baldness, can begin having hair loss as early as their teens or early 20s. It’s characterized by a receding hairline and gradual disappearance of hair from the crown and frontal scalp. Women with this condition, called female pattern baldness, don’t have noticeable thinning until their 40s or later. Women experience a general thinning over the entire scalp, with the most extensive hair loss at the crown.</li>
+      <li><b>Alopecia areata</b> often starts suddenly and causes patchy hair loss in children and young adults. This condition may result in complete baldness (alopecia totalis). But in about 90% of people with the condition, the hair returns within a few years.</li>
+      <li><b>Alopecia universalis</b>  causes all body hair to fall out, including the eyebrows, eyelashes, and pubic hair</li>
+      <li><b>Trichotillomania</b> seen most frequently in children, is a psychological disorder in which a person pulls out their own hair.</li>
+      <li><b>Telogen effluvium</b>is temporary hair thinning over the scalp that occurs because of changes in the growth cycle of hair. A large number of hairs enter the resting phase at the same time, causing hair shedding and subsequent thinning. Learn more about what causes telogen effluvium.</li>
+      <li><b>Scarring alopecias</b> result in permanent loss of hair. Inflammatory skin conditions (cellulitis, folliculitis, acne), and other skin disorders (such as some forms of lupus and lichen planus) often result in scars that destroy the ability of the hair to regenerate.</li>
+      <li><b>Traction alopecia</b> Hot combs and hair too tightly woven and pulled can also result in permanent hair loss.</li>
+      <li><b>Central centrifugal cicatricial alopecia</b> This is the most common type among Black women. This often manifests as a small bald patch in the center of the scalp that grows over time.</li>
+    </ul>
+  <h3 data-aos="fade-up">Hair Loss Causes</h3>
+    <p data-aos="fade-up">
+      Doctors don’t know why certain hair follicles are programmed to have a shorter growth period than others. However, several factors may influence hair loss:
+    </p>
+
+    <ul data-aos="fade-up">
+      <li><b>Hormones</b> such as abnormal levels of androgens (male hormones normally produced by both men and women)</li>
+      <li><b>Genes</b> from both male and female parents, may influence a person’s predisposition to male or female pattern baldness.</li>
+      <li><b>Stress, illness, childbirth</b> can cause temporary hair loss. Ringworm caused by a fungal infection can also cause hair loss. Learn what you can do to help reverse hair loss caused by stress.</li>
+      <li><b>Drugs</b> including chemotherapy drugs used in cancer treatment, blood thinners, beta-adrenergic blockers used to control blood pressure, and birth control pills, can cause temporary hair loss.</li>
+      <li><b>Burns, injuries,and X-rays</b>  can cause temporary hair loss. In such cases, normal hair growth usually returns once the injury heals unless a scar is produced. Then, hair will never regrow.</li>
+      <li><b>Autoimmune disease</b> may cause alopecia areata. In alopecia areata, the immune system revs up for unknown reasons and affects the hair follicles. In most people with alopecia areata, the hair grows back, although it may temporarily be very fine and possibly a lighter color before normal coloration and thickness return.</li>
+      <li><b>Cosmetic procedures</b> may cause alopecia areata. In alopecia areata, the immune system revs up for unknown reasons and affects the hair follicles. In most people with alopecia areata, the hair grows back, although it may temporarily be very fine and possibly a lighter color before normal coloration and thickness return.</li>
+      <li><b>Medical conditions</b> Thyroid disease, lupus, diabetes, iron deficiency anemia, eating disorders, and anemia can cause hair loss. Most times, when the underlying condition is treated, the hair will return unless there is scarring as in some forms of lupus, lichen planus, or follicular disorders.</li>
+      <li><b>Diet</b> . A low-protein diet or severely calorie-restricted diet can also cause temporary hair loss. Get information about foods that can help prevent hair loss.</li>
+      <li><b>Vitamin deficiencies</b>Deficiencies in vitamins A, B, C, D, and E, as well as iron and zinc, have been associated with hair loss.</li>
+    </ul>
+
+    <!-- FAQ -->
+    <h3 data-aos="fade-up">FAQs:-</h3>
+
+    <div class="faq" data-aos="fade-up">
+
+      <div class="faq-item">
+        <button class="faq-question">How many strands of hair fall is normal in a day?</button>
+        <div class="faq-answer">
+          <p>About 50–100 strands per day is normal.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Can stress cause hair loss?</button>
+        <div class="faq-answer">
+          <p>Yes, stress can trigger temporary hair loss.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Can shampoo and styling cause hair loss?</button>
+        <div class="faq-answer">
+          <p>Excessive styling can weaken hair.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Why does my hair fall out so easily?</button>
+        <div class="faq-answer">
+          <p>It may be due to stress, diet, or medical reasons.</p>
+        </div>
+      </div>
+
+
+        <div class="faq-item">
+        <button class="faq-question">why is my hair thinning?</button>
+        <div class="faq-answer">
+          <p>      Hair thinning can be caused by genetics, stress, hormonal changes, poor nutrition, or excessive styling.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+document.querySelectorAll(".faq-question").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const item = btn.parentElement;
+
+    document.querySelectorAll(".faq-item").forEach(i => {
+      if (i !== item) i.classList.remove("active");
+    });
+
+    item.classList.toggle("active");
+  });
+});
+</script>

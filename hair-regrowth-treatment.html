@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAIR REGROWTH TREATMENT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/regrowth.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Alovia Logo">
+      </div>
+
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+
+          <li class="has-sub">
+            <a href="about.html">ABOUT US <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="review.html">REVIEWS</a></li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+               <a href="slimming.html">SLIMMING <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li class="has-sub">
+               
+
+                <ul class="sub-menu">
+                  <li><a href="weight-loss-management.html">WEIGHT LOSS MANAGEMENT</a></li>
+                  <li><a href="fat-loss.html">FAT LOSS</a></li>
+                  <li><a href="figure-correction.html">FIGURE CORRECTION</a></li>
+                  <li><a href="body-contouring.html">BODY CONTOURING</a></li>
+                  <li><a href="muscle-toning-and-firming.html">MUSCLE TONING AND FIRMING</a></li>
+                  <li><a href="healthy-diet-advice.html">HEALTHY DIET ADVISE</a></li>
+                  <li><a href= "why-choose-alovia-for-weight-management.html">WHY CHOOSE ALOVIA FOR WEIGHT MANAGEMENT</a></li>
+
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="skin.html">SKIN <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+             
+
+                <ul class="sub-menu">
+                  <li><a href="acne-pimple-treatment.html">ACNE/PIMPLE TREATMENT</a></li>
+                  <li><a href="acne-scar-treatment.html">ACNE SCAR TREATMENT</a></li>
+                  <li><a href="dark-circles-treatment.html">DARK CIRCLES (Under Eye) TREATMENT</a></li>
+                  <li><a href="pigmentation-treatment.html">PIGMENTATION TREATMENT</a></li>
+                  <li><a href="skin-lightening-treatment.html">SKIN LIGHTENING TREATMENT</a></li>
+                  <li><a href="anti-ageing-treatment.html">ANTI AGEING TREATMENT</a></li>
+                  <li><a href="led-light-treatment.html">LED LIGHT TREATMENT</a></li>
+                  <li><a href="stretch-marks-treatment.html">STRETCH MARK TREATMENT</a></li>
+                  <li><a href="fine-lines-winkle-treatment.html">FINE LINES & WRINKLE TREATMENT</a></li>
+                  <li><a href="tattoo-removal.html">TATTOO REMOVAL</a></li>
+                  <li><a href="mole-wart-removal.html">MOLE AND WART REMOVAL</a></li>
+                  <li><a href="medi-facial.html">MEDI-FACIAL</a></li>
+                  <li><a href="semi-permanent-makeup-treatment.html">SEMI-PERMANENT MAKE-UP TREATMENT (Micro-Blading)</a></li>
+                  <li><a href="permanent-makeup-treatment.html">PERMANENT MAKE-UP TREATMENT (BB-Glow)</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="hair.html">HAIR <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="prp-for-hair-loss-treatment.html">Adavnce PRP For Hair Loss Treatment</a></li>
+              <li><a href="hair-regrowth-treatment.html">HAIR REGROWTH TREATMENT</a></li>
+              <li><a href="hair-transplantation.html">HAIR TRANSPLANTATION</a></li>
+              <li><a href="hair-loss-treatment.html">HAIR LOSS TREATMENT</a></li>
+              <li><a href="dandruff.html">DANDRUFF</a></li>
+            </ul>
+          </li>
+
+          <li><a href="laser.html">LASER</a></li>
+
+          <li class="has-sub">
+            <a href="ayurveda.html">AYURVEDA <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="panchakarma.html">PANCHAKARMA</a></li>
+              <li><a href="soundarya-vardhini.html">SOUNDARYA VARDHINI</a></li>
+              <li><a href="specialities.html">SPECIALITIES</a></li>
+              <li><a href="diseases.html">DISEASES</a></li>
+              <li><a href="d-stress.html">D-STRESS</a></li>
+            </ul>
+          </li>
+ <li><a href="physiotherapy.html">PHYSIOTHERAPY</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="payment.html">PAYMENT</a></li>
+        </ul>
+      </nav>
+
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  
+  <section class="hero">
+  </section>
+
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navbar = document.querySelector(".navbar");
+
+    menuToggle.onclick = () => {
+      navbar.classList.toggle("active");
+      const icon = menuToggle.querySelector("i");
+      icon.classList.toggle("fa-bars");
+      icon.classList.toggle("fa-times");
+    };
+
+    document.querySelectorAll(".has-sub > a").forEach(link => {
+      link.addEventListener("click", function (e) {
+        if (window.innerWidth <= 992) {
+          e.preventDefault();
+          const parent = this.parentElement;
+          parent.classList.toggle("open");
+        }
+      });
+    });
+  </script>
+
+
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+  duration: 1000,
+  once: true
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+<section class="hair-section">
+  <div class="hair-overlay">
+
+    <div class="hair-container">
+
+      <h1 data-aos="fade-up">HAIR RESTORATION AT ALOVIA</h1>
+
+      <div class="hair-content">
+
+        <!-- LEFT TEXT -->
+        <div class="hair-text">
+
+          <p data-aos="fade-up">
+           Finally a Non-Surgical Solution to Reverse Male and Female Pattern Baldness. Restore And Grow Healthy Hair at ALOVIA.
+          </p>
+
+          <p data-aos="fade-up">ADVANCED PRP treatment</p>
+
+          <p data-aos="fade-up">
+            Fight against Hair Thinning And Loss Naturally Without Surgery
+          </p>
+
+          <p data-aos="fade-up">
+            Non-Surgical Hair Therapy works on the basis on utilizing natural means of hair follicle rejuvenation. The therapy products enter the hair bulb circulation and stimulate hair follicles for healthy growth. This leads to changes in the follicle. Hair loss is one of the most disappointing cosmetic issues that can happen to both men and women. Hair loss can lead to a drastic deterioration in confidence. For those that are looking to reverse the effects of hair loss, Doctor innovative and proven hair therapy is a useful option.
+          </p>
+
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="hair-image" data-aos="fade-up">
+          <img src="images/hair.png" alt="Hair Treatment">
+        </div>
+
+      </div>
+
+      <!-- PROCESS -->
+      <h3 data-aos="fade-up">What Is The Process?</h3>
+
+      <p data-aos="fade-up">
+ The procedure is very straight forward. During the initial consultation our experts will examine your hair with a hair scope and will review your existing blood test and order a new test if necessary. He will review your hair and medical history. Doctor will then make an assessment of your current state of health and the likely reasons for hair loss. Afterwards, he will advise on the treatment options and the number of procedures. During the hair restoration procedure, Doctor will prepare the therapy products. In the next step your scalp will be treated with a topical anaesthesia. Then Doctor will apply product in the areas where you desire hair growth. There will be a few sessions spread one month apart. Hair growth will be noticeable in a few weeks from the first treatment and will keep improving over the course of treatment.
+
+
+
+      </p>
+
+      <!-- SUITABLE -->
+      <h3 data-aos="fade-up">Is The Therapy Suitable For All Hair Loss Types?</h3>
+
+      <p data-aos="fade-up">
+       This non-surgical method of Hair Restoration does not work with extreme cases hair loss. It is important that patients are correctly evaluated by Doctor who is a hair expert prior to commencing therapy to determine if they are candidates. Dr may have specific tests performed to find out if you are a suitable candidate for cosmetic hair rejuvenation therapy and will only proceed with the therapy in case he feels that the therapy will be a success and the patient is happy with the results
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="hairloss-section">
+
+  <div class="hairloss-container">
+
+    <h2 data-aos="fade-up">What Are the Common Causes of Hair Loss?</h2>
+
+    <p data-aos="fade-up">
+     Not all hair loss is the result of genetics. Certain health conditions can contribute to temporary or permanent hair loss, so it is important to be evaluated by Dr. in order to determine the cause. With an accurate diagnosis, it is more likely that you will be able to achieve positive results. Common causes of significant hair loss include:
+    </p>
+
+    <ul data-aos="fade-up">
+      <li><b>Androgenic Alopecia</b> – While the patterns of baldness for men and women differ, they both have a common cause. With male pattern baldness, hair loss typically occurs on the top and front of the head. With female pattern baldness, thinning occurs on the top and crown of the head. This thinning in women often starts as a widening of the centre hair part that leaves the front hairline unaffected.</li>
+
+      <li><b>Illnesses or Health Conditions</b> – all can cause temporary hair loss. In many cases, if the health condition is addressed or managed, the hair will regrow.</li>
+
+      <li><b>Trauma</b> – Scar tissue caused by physical injury, burns, or cosmetic surgery can interfere with hair growth, damaging the hair follicles and potentially causing permanent hair loss.</li>
+
+      <li><b>Alopecia Areata</b> – An autoimmune disease in which the body attacks its own hair follicles, resulting in sudden hair loss on the scalp, face, and body.</li>
+
+      <li><b>Pattern Baldness</b> – Also known as androgenic alopecia, pattern baldness is the most common cause of hair loss that affects both men and women, although men are predominantly affected by the condition. It is mainly caused by hereditary factors and may be gradual and permanent, beginning with a receding hairline or a thinning crown.</li>
+
+      <li><b>Traction Alopecia</b> – Trauma to the hair follicles by wearing tight hairstyles, such as ponytails, braids, or extensions can cause the hair to stop growing.</li>
+    </ul>
+
+    <h3 data-aos="fade-up">How Effective Is Hair Therapy?</h3>
+
+    <p data-aos="fade-up">
+      When considering the wide range of products available on the market for hair regrowth, Dr. Hair Growth Therapy is arguably the most effective of them. Keep in mind that there is never a guarantee of success and that your results may vary on the individual basis. Given this, Drs Hair Therapy is still a highly effective no-surgery, no-knives procedure for hair rejuvenation through follicle stimulation with growth factors found within your own blood. Through reversal of thinning and strengthening of follicle structure, the therapy strengthens growth of new hair in most hair loss patients.
+    </p>
+
+    <h3 data-aos="fade-up">Who Is A Good Candidate?</h3>
+
+    <p data-aos="fade-up">
+The best candidates for the treatment are those that do not have a severe form of hair loss. Hair Therapy is a great option for many men and women that are looking to restore their confidence and to regain a lush head of hair. Before getting Hair Therapy done, it is important to conduct a careful evaluation with Dr who will determine if you are the right candidate. Overall, this procedure is a safe and natural option for many individuals.
+    </p>
+
+    <h3 data-aos="fade-up">Is There a Cure For Baldness?</h3>
+
+    <p data-aos="fade-up">
+While Hair Restoration Therapy is not a cure for baldness (Androgenic Alopecia), it offers significant benefits for hair loss sufferers. The hereditary problem will always remain. However, there is evidence that regular treatments can significantly slow down the effects of Androgenic Alopecia and works to increase hair density. Please check out our before and after pictures section for the results you can expect.
+    </p>
+
+    <h3 data-aos="fade-up">FAQs:-</h3>
+
+    <div class="faq" data-aos="fade-up">
+
+      <div class="faq-item">
+        <button class="faq-question">How many treatments are required?</button>
+        <div class="faq-answer">
+          <p>Usually multiple sessions are required depending on hair condition.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Is the hair restoration process time consuming?</button>
+        <div class="faq-answer">
+          <p>No, each session is quick and convenient.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Does the procedure hurt?</button>
+        <div class="faq-answer">
+          <p>Minimal discomfort with topical anesthesia.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<script>
+document.querySelectorAll(".faq-question").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const item = btn.parentElement;
+
+    document.querySelectorAll(".faq-item").forEach(i => {
+      if (i !== item) i.classList.remove("active");
+    });
+
+    item.classList.toggle("active");
+  });
+});
+</script>

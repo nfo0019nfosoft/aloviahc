@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOUNDARYA VARDHINI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/vardini.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Alovia Logo">
+      </div>
+
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+
+          <li class="has-sub">
+            <a href="about.html">ABOUT US <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="review.html">REVIEWS</a></li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+               <a href="slimming.html">SLIMMING <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li class="has-sub">
+               
+
+                <ul class="sub-menu">
+                  <li><a href="weight-loss-management.html">WEIGHT LOSS MANAGEMENT</a></li>
+                  <li><a href="fat-loss.html">FAT LOSS</a></li>
+                  <li><a href="figure-correction.html">FIGURE CORRECTION</a></li>
+                  <li><a href="body-contouring.html">BODY CONTOURING</a></li>
+                  <li><a href="muscle-toning-and-firming.html">MUSCLE TONING AND FIRMING</a></li>
+                  <li><a href="healthy-diet-advice.html">HEALTHY DIET ADVISE</a></li>
+                  <li><a href= "why-choose-alovia-for-weight-management.html">WHY CHOOSE ALOVIA FOR WEIGHT MANAGEMENT</a></li>
+
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="skin.html">SKIN <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+             
+
+                <ul class="sub-menu">
+                  <li><a href="acne-pimple-treatment.html">ACNE/PIMPLE TREATMENT</a></li>
+                  <li><a href="acne-scar-treatment.html">ACNE SCAR TREATMENT</a></li>
+                  <li><a href="dark-circles-treatment.html">DARK CIRCLES (Under Eye) TREATMENT</a></li>
+                  <li><a href="pigmentation-treatment.html">PIGMENTATION TREATMENT</a></li>
+                  <li><a href="skin-lightening-treatment.html">SKIN LIGHTENING TREATMENT</a></li>
+                  <li><a href="anti-ageing-treatment.html">ANTI AGEING TREATMENT</a></li>
+                  <li><a href="led-light-treatment.html">LED LIGHT TREATMENT</a></li>
+                  <li><a href="stretch-marks-treatment.html">STRETCH MARK TREATMENT</a></li>
+                  <li><a href="fine-lines-winkle-treatment.html">FINE LINES & WRINKLE TREATMENT</a></li>
+                  <li><a href="tattoo-removal.html">TATTOO REMOVAL</a></li>
+                  <li><a href="mole-wart-removal.html">MOLE AND WART REMOVAL</a></li>
+                  <li><a href="medi-facial.html">MEDI-FACIAL</a></li>
+                  <li><a href="semi-permanent-makeup-treatment.html">SEMI-PERMANENT MAKE-UP TREATMENT (Micro-Blading)</a></li>
+                  <li><a href="permanent-makeup-treatment.html">PERMANENT MAKE-UP TREATMENT (BB-Glow)</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="hair.html">HAIR <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="prp-for-hair-loss-treatment.html">Adavnce PRP For Hair Loss Treatment</a></li>
+              <li><a href="hair-regrowth-treatment.html">HAIR REGROWTH TREATMENT</a></li>
+              <li><a href="hair-transplantation.html">HAIR TRANSPLANTATION</a></li>
+              <li><a href="hair-loss-treatment.html">HAIR LOSS TREATMENT</a></li>
+              <li><a href="dandruff.html">DANDRUFF</a></li>
+            </ul>
+          </li>
+
+          <li><a href="laser.html">LASER</a></li>
+
+          <li class="has-sub">
+            <a href="ayurveda.html">AYURVEDA <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="panchakarma.html">PANCHAKARMA</a></li>
+              <li><a href="soundarya-vardhini.html">SOUNDARYA VARDHINI</a></li>
+              <li><a href="specialities.html">SPECIALITIES</a></li>
+              <li><a href="diseases.html">DISEASES</a></li>
+              <li><a href="d-stress.html">D-STRESS</a></li>
+            </ul>
+          </li>
+ <li><a href="physiotherapy.html">PHYSIOTHERAPY</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="payment.html">PAYMENT</a></li>
+        </ul>
+      </nav>
+
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  
+  <section class="hero">
+  </section>
+
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navbar = document.querySelector(".navbar");
+
+    menuToggle.onclick = () => {
+      navbar.classList.toggle("active");
+      const icon = menuToggle.querySelector("i");
+      icon.classList.toggle("fa-bars");
+      icon.classList.toggle("fa-times");
+    };
+
+    document.querySelectorAll(".has-sub > a").forEach(link => {
+      link.addEventListener("click", function (e) {
+        if (window.innerWidth <= 992) {
+          e.preventDefault();
+          const parent = this.parentElement;
+          parent.classList.toggle("open");
+        }
+      });
+    });
+  </script>
+
+
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+  duration: 1000,
+  once: true
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+<section class="soundarya-section">
+
+  <div class="soundarya-container">
+
+    <h1 data-aos="fade-up">SOUNDARYA VARDHINI</h1>
+
+    <div class="soundarya-content">
+
+      <!-- LEFT TEXT -->
+      <div class="soundarya-text">
+
+        <p data-aos="fade-up">
+          In the context of Ayurveda, inner and outer beauties are intimately related. The more we nurture ourselves, the more radiant we become physically and expressively — regardless of our particular body shape or proportions. Ayurveda understands beauty as being a product of general physical health and appropriate daily care. The emphasis is on self-knowledge and development of positive routines and habits that will bring out the best in each one.
+        </p>
+
+        <p data-aos="fade-up">
+          Soundarya Vardhani has been traditionally used to enhance nourishment and cleansing of tissues which makes for a glowing complexion, maintain good tone and elasticity, melt away facial tension and bodily stress, redirect subtle energies relieving stiffness throughout the body, prevent sagging of the skin, reduce the appearance of wrinkles, remove toxins, revitalize tissues and correct skin conditions.
+        </p>
+
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="soundarya-image" data-aos="fade-up">
+        <img src="images/sou.png" alt="Soundarya Vardhini">
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="ayur-section">
+
+  <div class="ayur-overlay">
+
+    <div class="ayur-container">
+
+      <!-- CONTENT -->
+      <div class="ayur-content">
+
+        <h3 data-aos="fade-up">Mukha Soundaryavardhini</h3>
+
+        <p data-aos="fade-up"><strong>Duration: 75 – 90 minutes</strong></p>
+
+        <p data-aos="fade-up">
+          A facial beauty treatment to improve colour and complexion of the skin using gentle ayurvedic herbal face packs, face wash and cream. An Ayurvedic facial massage activates deep centres of the brain, reflex points and facial circulation to totally soothe the body.
+        </p>
+
+        <p data-aos="fade-up">
+          Tensions in the neck, shoulders and face are freed and energy is rebalanced from head to toe. Herbal extracts and essential oils may be added for their additional healing properties.
+        </p>
+
+        <h3 data-aos="fade-up">Keshini</h3>
+
+        <p data-aos="fade-up"><strong>Duration: 75 – 90 minutes</strong></p>
+
+        <p data-aos="fade-up">
+          Ayurvedic Hair Care for thick, strong glossy hair helps ensure hair roots are firm and the scalp is healthy. Moisturizing and massaging the scalp with herbal oils nourishes and strengthens hair roots and promotes hair growth.
+        </p>
+
+        <p data-aos="fade-up">
+          It is practiced using various herbal powders, pastes and shampoos.
+        </p>
+
+        <h3 data-aos="fade-up">Bhasini</h3>
+
+        <p data-aos="fade-up"><strong>Duration: 90 minutes</strong></p>
+
+        <p data-aos="fade-up">
+          It is a specially designed Ayurvedic Body Care program mainly aimed at toning and nourishing the body and skin. Highly useful in cleansing and rejuvenating the skin.
+        </p>
+
+      </div>
+
+      <!-- FAQ -->
+         <h3 data-aos="fade-up">FAQs:-</h3>
+      <div class="faq-box" data-aos="fade-up">
+
+      
+
+        <div class="faq-item">
+          <button class="faq-question">Mukhaleppam</button>
+          <div class="faq-answer">
+            <p>Traditional herbal facial treatment that improves skin tone and glow.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Ayurveda facial</button>
+          <div class="faq-answer">
+            <p>Natural facial using herbal oils to cleanse and rejuvenate skin.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Ayurveda Honey and Milk facial</button>
+          <div class="faq-answer">
+            <p>Deep moisturizing facial for soft and glowing skin.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Ayurveda Fruit facial</button>
+          <div class="faq-answer">
+            <p>Vitamin-rich facial that refreshes and brightens skin.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<script>
+document.querySelectorAll(".faq-question").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const item = btn.parentElement;
+
+    document.querySelectorAll(".faq-item").forEach(i => {
+      if (i !== item) i.classList.remove("active");
+    });
+
+    item.classList.toggle("active");
+  });
+});
+</script>
+

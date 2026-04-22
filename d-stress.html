@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D-STRESS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/dstress.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Alovia Logo">
+      </div>
+
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+
+          <li class="has-sub">
+            <a href="about.html">ABOUT US <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="review.html">REVIEWS</a></li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+               <a href="slimming.html">SLIMMING <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li class="has-sub">
+               
+
+                <ul class="sub-menu">
+                  <li><a href="weight-loss-management.html">WEIGHT LOSS MANAGEMENT</a></li>
+                  <li><a href="fat-loss.html">FAT LOSS</a></li>
+                  <li><a href="figure-correction.html">FIGURE CORRECTION</a></li>
+                  <li><a href="body-contouring.html">BODY CONTOURING</a></li>
+                  <li><a href="muscle-toning-and-firming.html">MUSCLE TONING AND FIRMING</a></li>
+                  <li><a href="healthy-diet-advice.html">HEALTHY DIET ADVISE</a></li>
+                  <li><a href= "why-choose-alovia-for-weight-management.html">WHY CHOOSE ALOVIA FOR WEIGHT MANAGEMENT</a></li>
+
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="skin.html">SKIN <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+             
+
+                <ul class="sub-menu">
+                  <li><a href="acne-pimple-treatment.html">ACNE/PIMPLE TREATMENT</a></li>
+                  <li><a href="acne-scar-treatment.html">ACNE SCAR TREATMENT</a></li>
+                  <li><a href="dark-circles-treatment.html">DARK CIRCLES (Under Eye) TREATMENT</a></li>
+                  <li><a href="pigmentation-treatment.html">PIGMENTATION TREATMENT</a></li>
+                  <li><a href="skin-lightening-treatment.html">SKIN LIGHTENING TREATMENT</a></li>
+                  <li><a href="anti-ageing-treatment.html">ANTI AGEING TREATMENT</a></li>
+                  <li><a href="led-light-treatment.html">LED LIGHT TREATMENT</a></li>
+                  <li><a href="stretch-marks-treatment.html">STRETCH MARK TREATMENT</a></li>
+                  <li><a href="fine-lines-winkle-treatment.html">FINE LINES & WRINKLE TREATMENT</a></li>
+                  <li><a href="tattoo-removal.html">TATTOO REMOVAL</a></li>
+                  <li><a href="mole-wart-removal.html">MOLE AND WART REMOVAL</a></li>
+                  <li><a href="medi-facial.html">MEDI-FACIAL</a></li>
+                  <li><a href="semi-permanent-makeup-treatment.html">SEMI-PERMANENT MAKE-UP TREATMENT (Micro-Blading)</a></li>
+                  <li><a href="permanent-makeup-treatment.html">PERMANENT MAKE-UP TREATMENT (BB-Glow)</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="hair.html">HAIR <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="prp-for-hair-loss-treatment.html">Adavnce PRP For Hair Loss Treatment</a></li>
+              <li><a href="hair-regrowth-treatemnt.html">HAIR REGROWTH TREATMENT</a></li>
+              <li><a href="hair-transplantation.html">HAIR TRANSPLANTATION</a></li>
+              <li><a href="hair-loss-treatment.html">HAIR LOSS TREATMENT</a></li>
+              <li><a href="dandruff.html">DANDRUFF</a></li>
+            </ul>
+          </li>
+
+          <li><a href="laser.html">LASER</a></li>
+
+          <li class="has-sub">
+            <a href="ayurveda.html">AYURVEDA <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="panchakarma.html">PANCHAKARMA</a></li>
+              <li><a href="soundarya-vardhini.html">SOUNDARYA VARDHINI</a></li>
+              <li><a href="specialities.html">SPECIALITIES</a></li>
+              <li><a href="diseases.html">DISEASES</a></li>
+              <li><a href="d-stress.html">D-STRESS</a></li>
+            </ul>
+          </li>
+ <li><a href="physiotherapy.html">PHYSIOTHERAPY</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="payment.html">PAYMENT</a></li>
+        </ul>
+      </nav>
+
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  
+  <section class="hero">
+  </section>
+
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navbar = document.querySelector(".navbar");
+
+    menuToggle.onclick = () => {
+      navbar.classList.toggle("active");
+      const icon = menuToggle.querySelector("i");
+      icon.classList.toggle("fa-bars");
+      icon.classList.toggle("fa-times");
+    };
+
+    document.querySelectorAll(".has-sub > a").forEach(link => {
+      link.addEventListener("click", function (e) {
+        if (window.innerWidth <= 992) {
+          e.preventDefault();
+          const parent = this.parentElement;
+          parent.classList.toggle("open");
+        }
+      });
+    });
+  </script>
+
+
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+  duration: 1000,
+  once: true
+});
+</script>
+
+
+
+
+
+
+
+
+
+<section class="soundarya-section">
+
+  <div class="soundarya-container">
+
+    <h1 data-aos="fade-up">D-STRESS</h1>
+
+    <div class="soundarya-content">
+
+      <!-- LEFT TEXT -->
+      <div class="soundarya-text">
+
+        <p data-aos="fade-up">
+       According to Ayurveda, stress on the body and mind is the primary reason for all problems – physical, mental, social, family, relationships, economical and spiritual problems in our life.stress management therapy works well for people stressed out due to work and a hectic lifestyle. If you are suffering from anxiety, depression, post-traumatic stress and other psychological issues, this Ayurveda stress management therapy may be helpful but not sufficient. Anxiety, depression and other psychological disorders are much more deeply seated in the mind. You may need the help of professionals in psychiatry, psycho-therapy
+       </p>
+
+       
+
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="soundarya-image" data-aos="fade-up">
+        <img src="images/dstress.png" alt="Soundarya Vardhini">
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="stress-faq-section">
+
+  <div class="stress-overlay">
+
+    <div class="stress-container">
+
+      <!-- CONTENT -->
+      <div class="stress-content" data-aos="fade-up">
+        <p>
+          Stress is a state of mental and physical pressure resulting from an imbalance between specific demands and the individual’s ability and motivation to meet those demands. In a stressful event our body produces larger quantities of the chemicals cortisol, adrenaline and noradrenaline, which trigger a higher heart rate, and sweating:
+        </p>
+
+        <h4>Causes:</h4>
+        <ul>
+          <li>Workplace stress</li>
+          <li>Emotional stress</li>
+          <li>Trauma</li>
+          <li>Fear</li>
+          <li>Financial burden</li>
+          <li>Lack of sleep</li>
+          <li>Anxiety</li>
+        </ul>
+
+        <h4>Complications:</h4>
+        <p>
+          Weakened Immune System, Hypertension, Headaches, Depression, Heart Diseases, Gastrointestinal problems, and Accelerated ageing.
+        </p>
+
+        <h4>Ayurveda’s Role:</h4>
+        <p>
+          Stress is not a problem but how we react to the stressors causes the problem. An imbalance in 3 main mental functions: Dhi (learning), Dhriti (retention) and Smriti (long-term memory) along with a paucity of ‘Ojas’(energy) in the body; makes us unable to deal with stress.
+        </p>
+
+
+        <p>At <b>ALOVIA,</b> the Stress Management Program comprises of various relaxation techniques like Sunidra to relieve the body from stress piled up over the years and raise the Ojas (energy) level of the body by bringing a proper hormonal balance and improving blood circulation. It is focused on strengthening the mental vigour to be able to cope with stress in any situation thereby enhancing sound sleep, and stimulating the nervous system and a healthier body.</p>
+      </div>
+
+      <!-- FAQ -->
+      <h2 class="faq-title" data-aos="fade-up">FAQs:-</h2>
+
+      <div class="faq-box">
+
+        <div class="faq-item">
+          <button class="faq-question">Are Ayurvedic medicines for stress habit-forming?</button>
+          <div class="faq-answer">
+            <p>No, Ayurvedic treatments are generally natural and non-habit forming when taken under guidance.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">For how long should I take Ayurvedic medicines for stress?</button>
+          <div class="faq-answer">
+            <p>Duration varies depending on condition; usually a few weeks to months under expert supervision.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Will stress affect my BP?</button>
+          <div class="faq-answer">
+            <p>Yes, chronic stress can contribute to increased blood pressure over time.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">Can stress lead to panic or anxiety attacks?</button>
+          <div class="faq-answer">
+            <p>Yes, prolonged stress may trigger anxiety or panic episodes in some individuals.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">How can Ayurveda help with anxiety?</button>
+          <div class="faq-answer">
+            <p>Ayurveda supports relaxation, better sleep, and mental balance through therapies and lifestyle changes.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<script>
+  const items = document.querySelectorAll(".faq-item");
+
+  items.forEach(item => {
+    item.querySelector(".faq-question").addEventListener("click", () => {
+      item.classList.toggle("active");
+    });
+  });
+</script>

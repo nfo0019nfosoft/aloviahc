@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PHYSIOTHERAPY</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/phy.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Alovia Logo">
+      </div>
+
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+
+          <li class="has-sub">
+            <a href="about.html">ABOUT US <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="review.html">REVIEWS</a></li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+               <a href="slimming.html">SLIMMING <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li class="has-sub">
+               
+
+                <ul class="sub-menu">
+                  <li><a href="weight-loss-management.html">WEIGHT LOSS MANAGEMENT</a></li>
+                  <li><a href="fat-loss.html">FAT LOSS</a></li>
+                  <li><a href="figure-correction.html">FIGURE CORRECTION</a></li>
+                  <li><a href="body-contouring.html">BODY CONTOURING</a></li>
+                  <li><a href="muscle-toning-and-firming.html">MUSCLE TONING AND FIRMING</a></li>
+                  <li><a href="healthy-diet-advice.html">HEALTHY DIET ADVISE</a></li>
+                  <li><a href= "why-choose-alovia-for-weight-management.html">WHY CHOOSE ALOVIA FOR WEIGHT MANAGEMENT</a></li>
+
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="skin.html">SKIN <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+             
+
+                <ul class="sub-menu">
+                  <li><a href="acne-pimple-treatment.html">ACNE/PIMPLE TREATMENT</a></li>
+                  <li><a href="acne-scar-treatment.html">ACNE SCAR TREATMENT</a></li>
+                  <li><a href="dark-circles-treatment.html">DARK CIRCLES (Under Eye) TREATMENT</a></li>
+                  <li><a href="pigmentation-treatment.html">PIGMENTATION TREATMENT</a></li>
+                  <li><a href="skin-lightening-treatment.html">SKIN LIGHTENING TREATMENT</a></li>
+                  <li><a href="anti-ageing-treatment.html">ANTI AGEING TREATMENT</a></li>
+                  <li><a href="led-light-treatment.html">LED LIGHT TREATMENT</a></li>
+                  <li><a href="stretch-marks-treatment.html">STRETCH MARK TREATMENT</a></li>
+                  <li><a href="fine-lines-winkle-treatment.html">FINE LINES & WRINKLE TREATMENT</a></li>
+                  <li><a href="tattoo-removal.html">TATTOO REMOVAL</a></li>
+                  <li><a href="mole-wart-removal.html">MOLE AND WART REMOVAL</a></li>
+                  <li><a href="medi-facial.html">MEDI-FACIAL</a></li>
+                  <li><a href="semi-permanent-makeup-treatment.html">SEMI-PERMANENT MAKE-UP TREATMENT (Micro-Blading)</a></li>
+                  <li><a href="permanent-makeup-treatment.html">PERMANENT MAKE-UP TREATMENT (BB-Glow)</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="hair.html">HAIR <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="prp-for-hair-loss-treatment.html">Adavnce PRP For Hair Loss Treatment</a></li>
+              <li><a href="hair-regrowth-treatment.html">HAIR REGROWTH TREATMENT</a></li>
+              <li><a href="hair-transplantation.html">HAIR TRANSPLANTATION</a></li>
+              <li><a href="hair-loss-treatment.html">HAIR LOSS TREATMENT</a></li>
+              <li><a href="dandruff.html">DANDRUFF</a></li>
+            </ul>
+          </li>
+
+          <li><a href="laser.html">LASER</a></li>
+
+          <li class="has-sub">
+            <a href="ayurveda.html">AYURVEDA <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="panchakarma.html">PANCHAKARMA</a></li>
+              <li><a href="soundarya-vardhini.html">SOUNDARYA VARDHINI</a></li>
+              <li><a href="specialities.html">SPECIALITIES</a></li>
+              <li><a href="diseases.html">DISEASES</a></li>
+              <li><a href="d-stress.html">D-STRESS</a></li>
+            </ul>
+          </li>
+ <li><a href="physiotherapy.html">PHYSIOTHERAPY</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="payment.html">PAYMENT</a></li>
+        </ul>
+      </nav>
+
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  
+  <section class="hero">
+  </section>
+
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navbar = document.querySelector(".navbar");
+
+    menuToggle.onclick = () => {
+      navbar.classList.toggle("active");
+      const icon = menuToggle.querySelector("i");
+      icon.classList.toggle("fa-bars");
+      icon.classList.toggle("fa-times");
+    };
+
+    document.querySelectorAll(".has-sub > a").forEach(link => {
+      link.addEventListener("click", function (e) {
+        if (window.innerWidth <= 992) {
+          e.preventDefault();
+          const parent = this.parentElement;
+          parent.classList.toggle("open");
+        }
+      });
+    });
+  </script>
+
+
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+  duration: 1000,
+  once: true
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+<section class="soundarya-section">
+
+  <div class="soundarya-container">
+
+    <h1 data-aos="fade-up">What Is Physiotherapy?</h1>
+
+    <div class="soundarya-content">
+
+      <!-- LEFT TEXT -->
+      <div class="soundarya-text">
+
+        <p data-aos="fade-up">
+          Physiotherapy, also referred to as physical therapy, is an allied health profession that makes use of bio-mechanics or kinesiology, manual therapy, exercise therapy, and electrotherapy, to help patients restore, maintain and increase their physical mobility, strength, and function.
+        </p>
+
+        <p data-aos="fade-up">
+            Physiotherapists are better able to help patients regain mobility, as they have a better understanding of how the body works and are trained in clinical skills to assess, diagnose and treat disabilities. Physiotherapists can help patients recover from injuries and disabilities ranging from back pain, neck pain, and knee pain to ligament issues.
+        </p>
+
+        
+        <p data-aos="fade-up">
+            Physiotherapy also helps in the rehabilitation of patients suffering from Parkinson’s, Paralysis, Stroke, Multiple Sclerosis, and Cerebral Palsy. Furthermore, physiotherapists can heal both chronic and acute problems by treating patients at home
+        </p>
+
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="soundarya-image" data-aos="fade-up">
+        <img src="images/phy.png" alt="Soundarya Vardhini">
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="therapy-section light">
+  <div class="therapy-container">
+
+    <h2 data-aos="fade-up">Orthopedic Physiotherapy</h2>
+
+    <div class="therapy-row reverse">
+
+      <div class="therapy-text" data-aos="fade-up">
+        <p>
+       Orthopedic physiotherapy refers to the treatment of issues associated with muscles & bones and their related injuries or disorders. After an orthopaedic illness or surgery, people often lose their mobility which affects their quality of life. In such cases, physiotherapy offers pain relief, boosts joint range, and enhances strength.
+        </p>
+
+        <p>
+This treatment is often recommended for sprains, strains, post fracture, post surgery and in cases of repetitive injuries.
+        </p>
+
+      </div>
+
+      <div class="therapy-img" data-aos="fade-up">
+        <img src="images/phy1.png" alt="">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="therapy-section dark">
+  <div class="therapy-container">
+
+    <h3 data-aos="fade-up">Geriatric physiotherapy</h3>
+
+    <div class="therapy-row ">
+
+      <div class="therapy-text" data-aos="fade-up">
+        <p>
+            Geriatric Physical Therapy is a form of physical therapy specifically geared toward older adults and their unique issues and challenges. Geriatric physical therapy takes into account that older adults tend to become less active over time, experience a decrease in muscle strength, coordination, and reaction timing, and have a lower tolerance for physical activity. In virechan, purgation or disposal of toxins happens through the clearing of the bowels. In this treatment too, the patient is given inside and outside oleation and fomentation treatments. From that point onward, the patient is given a natural purgative to encourage clearing of the guts that aides in purifying the body of toxins. Virechan treatment is prescribed fundamentally for pitta -dominated conditions, such as herpes zoster, jaundice , colitis, celiac infection etc.
+        </p>
+
+
+<p>
+    Geriatric physical therapy is different from other types of physical therapy because it focuses more on building strength and endurance in older adults to help in the following ways:
+</p>
+
+<p>
+    Keeping Active 
+</p>
+<p>
+    1. Preventing deconditioning (reversal of previous conditioning)<br>
+    2. Preventing muscle atrophy (the wasting away of muscles)<br>
+    3. Decreasing the risk of  falls and  related injuries<br>
+    4. Maintaining independence in performing daily activities
+</p>
+
+
+      </div>
+
+      <div class="therap-img" data-aos="fade-up">
+        <img src="images/phy2.png" alt="">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="therapy-section light">
+  <div class="therapy-container">
+
+    <h2 data-aos="fade-up">Sports physiotherapy</h2>
+
+    <div class="therapy-row reverse">
+
+      <div class="therapy-text" data-aos="fade-up">
+        <p>
+        Our certified, experienced and specialized physiotherapists treat various sports injuries right at the comfort of your home. Injuries due to sports accidents are better handled by sports physiotherapists who specialize in sports injuries. Sports physiotherapy is vital for an injury during a sportsman’s career. Timely and effective healing can determine the athlete’s and the team’s success. Sports physiotherapists engage in the management of wounds and also help in preventing injuries that may occur during exercise or sports. They help you get back on feet at the earliest, ensuring complete healing of the affected tissues using latest technology and physiotherapy methods.
+        </p>
+
+        <p>
+            Fractures, sprains, strains, dislocation of joints, ligament tear and many other sports injuries are all treated by our trained and experienced sports physiotherapists right in the comfort of your home and at Alovia as well
+        </p>
+
+
+
+      </div>
+
+      <div class="thera-img" data-aos="fade-up">
+        <img src="images/phy3.png" alt="">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="therapy-section dark">
+  <div class="therapy-container">
+
+    <h3 data-aos="fade-up">Neurological Physiotherapy</h3>
+
+    <div class="therapy-row ">
+
+      <div class="therapy-text" data-aos="fade-up">
+        <p>
+         Neurological physiotherapy treatment refers to the treatment of patients suffering from neurological disorders. Neurological disorders primarily affect the brain, spinal cord, and nerves. This results in the loss of movement, sensation, uncoordinated movement, weak muscles, spasm, tremor, and pain. Neurological physiotherapy helps patients improve mobility and develop proper functioning.
+        </p>
+        <p>
+            Neuro physiotherapy exercises improve muscle weakness, poor balance and coordination, uncontrolled muscle spasm & tremors, loss of functions and thereby, improve the quality of life of the patient.
+        </p>
+      </div>
+
+      <div class="therapy-img" data-aos="fade-up">
+        <img src="images/phy4.png" alt="">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="therapy-section light">
+  <div class="therapy-container">
+
+    <h2 data-aos="fade-up">Post-Operative Physiotherapy</h2>
+
+    <div class="therapy-row reverse">
+
+      <div class="therapy-text" data-aos="fade-up">
+        <p>
+          Post-operative physiotherapy is the key to a patient’s recovery. This surgery rehabilitation therapy is vital to restoring body strength, motility, and full joint movement & functionality. After undergoing any major surgery such as cardiac surgery, cancer prevention surgery, or orthopedic surgery, physical therapy becomes an absolute requirement. Surgeons highly recommend rehab physical therapy since it can hasten the post-operative recovery as well as reduce any swelling that follows the initial injury. Physiotherapists plan the sessions and exercise programs depending on the different phases of healing and the progress of the patient.
+        </p>
+      </div>
+
+      <div class="therapy-img" data-aos="fade-up">
+        <img src="images/phy5.png" alt="">
+      </div>
+
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DISEASES</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/diab.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Alovia Logo">
+      </div>
+
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+
+          <li class="has-sub">
+            <a href="about.html">ABOUT US <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="review.html">REVIEWS</a></li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+               <a href="slimming.html">SLIMMING <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li class="has-sub">
+               
+
+                <ul class="sub-menu">
+                  <li><a href="weight-loss-management.html">WEIGHT LOSS MANAGEMENT</a></li>
+                  <li><a href="fat-loss.html">FAT LOSS</a></li>
+                  <li><a href="figure-correction.html">FIGURE CORRECTION</a></li>
+                  <li><a href="body-contouring.html">BODY CONTOURING</a></li>
+                  <li><a href="muscle-toning-and-firming.html">MUSCLE TONING AND FIRMING</a></li>
+                  <li><a href="healthy-diet-advice.html">HEALTHY DIET ADVISE</a></li>
+                  <li><a href= "why-choose-alovia-for-weight-management.html">WHY CHOOSE ALOVIA FOR WEIGHT MANAGEMENT</a></li>
+
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="skin.html">SKIN <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+             
+
+                <ul class="sub-menu">
+                  <li><a href="acne-pimple-treatment.html">ACNE/PIMPLE TREATMENT</a></li>
+                  <li><a href="acne-scar-treatment.html">ACNE SCAR TREATMENT</a></li>
+                  <li><a href="dark-circles-treatment.html">DARK CIRCLES (Under Eye) TREATMENT</a></li>
+                  <li><a href="pigmentation-treatment.html">PIGMENTATION TREATMENT</a></li>
+                  <li><a href="skin-lightening-treatment.html">SKIN LIGHTENING TREATMENT</a></li>
+                  <li><a href="anti-ageing-treatment.html">ANTI AGEING TREATMENT</a></li>
+                  <li><a href="led-light-treatment.html">LED LIGHT TREATMENT</a></li>
+                  <li><a href="stretch-marks-treatment.html">STRETCH MARK TREATMENT</a></li>
+                  <li><a href="fine-lines-winkle-treatment.html">FINE LINES & WRINKLE TREATMENT</a></li>
+                  <li><a href="tattoo-removal.html">TATTOO REMOVAL</a></li>
+                  <li><a href="mole-wart-removal.html">MOLE AND WART REMOVAL</a></li>
+                  <li><a href="medi-facial.html">MEDI-FACIAL</a></li>
+                  <li><a href="semi-permanent-makeup-treatment.html">SEMI-PERMANENT MAKE-UP TREATMENT (Micro-Blading)</a></li>
+                  <li><a href="permanent-makeup-treatment.html">PERMANENT MAKE-UP TREATMENT (BB-Glow)</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="hair.html">HAIR <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="prp-for-hair-loss-treatment.html">Adavnce PRP For Hair Loss Treatment</a></li>
+              <li><a href="hair-regrowth-treatment.html">HAIR REGROWTH TREATMENT</a></li>
+              <li><a href="hair-transplantation.html">HAIR TRANSPLANTATION</a></li>
+              <li><a href="hair-loss-treatment.html">HAIR LOSS TREATMENT</a></li>
+              <li><a href="dandruff.html">DANDRUFF</a></li>
+            </ul>
+          </li>
+
+          <li><a href="laser.html">LASER</a></li>
+
+          <li class="has-sub">
+            <a href="ayurveda.html">AYURVEDA <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="panchakarma.html">PANCHAKARMA</a></li>
+              <li><a href="soundarya-vardhini.html">SOUNDARYA VARDHINI</a></li>
+              <li><a href="specialities.html">SPECIALITIES</a></li>
+              <li><a href="diseases.html">DISEASES</a></li>
+              <li><a href="d-stress.html">D-STRESS</a></li>
+            </ul>
+          </li>
+ <li><a href="physiotherapy.html">PHYSIOTHERAPY</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="payment.html">PAYMENT</a></li>
+        </ul>
+      </nav>
+
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  
+  <section class="hero">
+  </section>
+
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navbar = document.querySelector(".navbar");
+
+    menuToggle.onclick = () => {
+      navbar.classList.toggle("active");
+      const icon = menuToggle.querySelector("i");
+      icon.classList.toggle("fa-bars");
+      icon.classList.toggle("fa-times");
+    };
+
+    document.querySelectorAll(".has-sub > a").forEach(link => {
+      link.addEventListener("click", function (e) {
+        if (window.innerWidth <= 992) {
+          e.preventDefault();
+          const parent = this.parentElement;
+          parent.classList.toggle("open");
+        }
+      });
+    });
+  </script>
+
+
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+  duration: 1000,
+  once: true
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="soundarya-section">
+
+  <div class="soundarya-container">
+
+    <h1 data-aos="fade-up">DISEASES</h1>
+
+    <div class="soundarya-content">
+
+      <!-- LEFT TEXT -->
+      <div class="soundarya-text">
+
+        <p data-aos="fade-up">
+        Health is defined as a state where in the dynamic balance of doshas, dhatus and malas is maintained, the metabolism is at optimum level and soul, mind and sense organs assume sublime position.
+        </p>
+
+        <p data-aos="fade-up">
+          At ALOVIA, Specific & Speciality treatments are provided for following diseases or health conditions :
+        </p>
+
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="soundarya-image" data-aos="fade-up">
+        <img src="images/dia.png" alt="Soundarya Vardhini">
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="conditions-section">
+
+  <div class="conditions-overlay">
+
+    <div class="conditions-container">
+
+      <h2 data-aos="fade-up">Conditions We Treat</h2>
+
+      <div class="conditions-grid">
+
+        <!-- LEFT LIST -->
+        <ul data-aos="fade-up">
+          <li>Motor Neurone Disease (MND) / Amyotrophic lateral sclerosis (ALS)</li><li>Multiple Sclerosis (MS)</li><li>Parkinson’s disease (PD)</li><li>Parkinson plus syndrome/ Parkinsonism</li><li>Progressive Supranuclear Palsy (PSP)</li><li>Multiple system atrophy (MSA)</li><li>Cerebral Palsy (CP)</li><li>Ankylosing spondylitis (AS)</li><li>Rheumatoid arthritis (RA)</li><li>Lyme disease</li><li>Chikungunya</li><li>Slip Disc</li><li>Sciatica</li><li>Herniated Disc</li><li>Cervical Spondylosis</li><li>Lumbar Spondylosis</li><li>Myelopathy</li><li>Back Pain</li><li>Neck Pain</li><li>Spondylitis</li><li>Osteoarthritis (OA)</li><li>Avascular necrosis (AVN)</li><li>Gout</li><li>Osteoporosis</li><li>Psoriatic arthritis</li><li>Fibromyalgia</li><li>Frozen shoulder</li><li>Tennis Elbow</li><li>Calcaneal spur / Plantar Fasciitis</li><li>Carpal Tunnel Syndrome</li><li>Muscular Dystrophy</li><li>Myasthenia gravis</li><li>Systemic Sclerosis</li><li>Systemic Lupus Erythematosus (SLE)</li><li>Hemiplegia / Stroke / CVA / Paralysis</li><li>Facial Palsy</li><li>Alzheimer’s disease (AD)</li><li>Dementia</li><li>Vertigo</li><li>Mental retardation</li><li>Autism (ASD)</li><li>ADHD</li><li>Neuro-muscular disorders</li><li>Degenerative disorders</li><li>Chronic Fatigue Syndrome</li><li>Crohn’s disease</li><li>Ulcerative colitis</li><li>Inflammatory Bowel Disease (IBD)</li><li>Irritable bowel syndrome (IBS)</li><li>Diabetes / Diabetic complications</li><li>Peripheral Neuropathy</li><li>Hypertension (HTN)</li><li>Coronary / Ischaemic Heart Disease (CAD/IHD)</li><li>Atherosclerosis</li><li>Hyper Lipidemia</li><li>Interstitial Lung Disease (ILD)</li><li>Asthma</li><li>Respiratory tract infections</li><li>Bronchitis</li><li>Migraine</li><li>Eye &amp; ENT diseases</li><li>Sinusitis</li><li>Tinnitus / Hearing Loss</li><li>Allergic Rhinitis</li><li>Tonsillitis / Adenoids</li>
+
+        </ul>
+
+        <!-- RIGHT LIST -->
+        <ul data-aos="fade-up" data-aos-delay="200">
+         <li>Cancer</li><li>HIV/AIDS</li><li>Frailty syndrome</li><li>Obesity</li><li>Male Infertility</li><li>Erectile dysfunction</li><li>Premature Ejaculation</li><li>Oligospermia</li><li>Loss Of Libido</li><li>Female Infertility</li><li>Recurrent pregnancy loss (RPL)</li><li>Gynaec problems</li><li>PCOD</li><li>Leucorrhoea</li><li>Amenorrhoea</li><li>Menstrual disorders</li><li>Ante &amp; Post natal care</li><li>Skin diseases</li><li>Psoriasis</li><li>Eczema</li><li>Leucoderma</li><li>Urticaria</li><li>Acne</li><li>Folliculitis</li><li>Hidradenitis suppurativa</li><li>Pigmentation</li><li>Loss of memory and concentration</li><li>Sleeplessness (Insomnia)</li><li>Hair fall / Hair Loss</li><li>Alopecia areata</li><li>Greying of hair</li><li>Dandruff</li><li>Hepatitis</li><li>Liver Cirrhosis</li><li>Alcoholic liver disease (ALD)</li><li>Chronic liver disease (CLD)</li><li>Nonalcoholic steatohepatitis (NASH)</li><li>Jaundice</li><li>Splenomegaly</li><li>Pancreatitis</li><li>Gallstones</li><li>Cholecystitis</li><li>Anemia</li><li>Chronic kidney disease (CKD)</li><li>Renal calculi</li><li>UTI</li><li>Benign prostatic hyperplasia (BPH)</li><li>Indigestion / Acidity</li><li>GERD</li><li>Anorexia</li><li>Gastric Ulcer</li><li>Peptic Ulcer</li><li>Constipation</li><li>Piles</li><li>Fissure in Ano</li><li>Fistula</li><li>Varicose veins</li><li>Epilepsy</li><li>Psychosis</li><li>Schizophrenia</li><li>Obsessive compulsive disorder (OCD)</li><li>Anxiety Disorder</li><li>Depression</li><li>Ganglion</li><li>Corns</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

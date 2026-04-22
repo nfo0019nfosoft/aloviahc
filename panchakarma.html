@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PANCHAKARMA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/panch.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Alovia Logo">
+      </div>
+
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+
+          <li class="has-sub">
+            <a href="about.html">ABOUT US <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="review.html">REVIEWS</a></li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+               <a href="slimming.html">SLIMMING <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li class="has-sub">
+               
+
+                <ul class="sub-menu">
+                  <li><a href="weight-loss-management.html">WEIGHT LOSS MANAGEMENT</a></li>
+                  <li><a href="fat-loss.html">FAT LOSS</a></li>
+                  <li><a href="figure-correction.html">FIGURE CORRECTION</a></li>
+                  <li><a href="body-contouring.html">BODY CONTOURING</a></li>
+                  <li><a href="muscle-toning-and-firming.html">MUSCLE TONING AND FIRMING</a></li>
+                  <li><a href="healthy-diet-advice.html">HEALTHY DIET ADVISE</a></li>
+                  <li><a href= "why-choose-alovia-for-weight-management.html">WHY CHOOSE ALOVIA FOR WEIGHT MANAGEMENT</a></li>
+
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="skin.html">SKIN <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+             
+
+                <ul class="sub-menu">
+                  <li><a href="acne-pimple-treatment.html">ACNE/PIMPLE TREATMENT</a></li>
+                  <li><a href="acne-scar-treatment.html">ACNE SCAR TREATMENT</a></li>
+                  <li><a href="dark-circles-treatment.html">DARK CIRCLES (Under Eye) TREATMENT</a></li>
+                  <li><a href="pigmentation-treatment.html">PIGMENTATION TREATMENT</a></li>
+                  <li><a href="skin-lightening-treatment.html">SKIN LIGHTENING TREATMENT</a></li>
+                  <li><a href="anti-ageing-treatment.html">ANTI AGEING TREATMENT</a></li>
+                  <li><a href="led-light-treatment.html">LED LIGHT TREATMENT</a></li>
+                  <li><a href="stretch-marks-treatment.html">STRETCH MARK TREATMENT</a></li>
+                  <li><a href="fine-lines-winkle-treatment.html">FINE LINES & WRINKLE TREATMENT</a></li>
+                  <li><a href="tattoo-removal.html">TATTOO REMOVAL</a></li>
+                  <li><a href="mole-wart-removal.html">MOLE AND WART REMOVAL</a></li>
+                  <li><a href="medi-facial.html">MEDI-FACIAL</a></li>
+                  <li><a href="semi-permanent-makeup-treatment.html">SEMI-PERMANENT MAKE-UP TREATMENT (Micro-Blading)</a></li>
+                  <li><a href="permanent-makeup-treatment.html">PERMANENT MAKE-UP TREATMENT (BB-Glow)</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="hair.html">HAIR <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="prp-for-hair-loss-treatment.html">Adavnce PRP For Hair Loss Treatment</a></li>
+              <li><a href="hair-regrowth-treatment.html">HAIR REGROWTH TREATMENT</a></li>
+              <li><a href="hair-transplantation.html">HAIR TRANSPLANTATION</a></li>
+              <li><a href="hair-loss-treatment.html">HAIR LOSS TREATMENT</a></li>
+              <li><a href="dandruff.html">DANDRUFF</a></li>
+            </ul>
+          </li>
+
+          <li><a href="laser.html">LASER</a></li>
+
+          <li class="has-sub">
+            <a href="ayurveda.html">AYURVEDA <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="panchakarma.html">PANCHAKARMA</a></li>
+              <li><a href="soundarya-vardhini.html">SOUNDARYA VARDHINI</a></li>
+              <li><a href="specialities.html">SPECIALITIES</a></li>
+              <li><a href="diseases.html">DISEASES</a></li>
+              <li><a href="d-stress.html">D-STRESS</a></li>
+            </ul>
+          </li>
+ <li><a href="physiotherapy.html">PHYSIOTHERAPY</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="payment.html">PAYMENT</a></li>
+        </ul>
+      </nav>
+
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  
+  <section class="hero">
+  </section>
+
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navbar = document.querySelector(".navbar");
+
+    menuToggle.onclick = () => {
+      navbar.classList.toggle("active");
+      const icon = menuToggle.querySelector("i");
+      icon.classList.toggle("fa-bars");
+      icon.classList.toggle("fa-times");
+    };
+
+    document.querySelectorAll(".has-sub > a").forEach(link => {
+      link.addEventListener("click", function (e) {
+        if (window.innerWidth <= 992) {
+          e.preventDefault();
+          const parent = this.parentElement;
+          parent.classList.toggle("open");
+        }
+      });
+    });
+  </script>
+
+
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+  duration: 1000,
+  once: true
+});
+</script>
+
+
+
+
+
+<section class="panchakarma-section">
+
+  <div class="panchakarma-container">
+
+    <h1>PANCHAKARMA TREATMENT</h1>
+
+    <div class="panchakarma-content">
+
+      <!-- LEFT -->
+      <div class="panchakarma-left">
+
+        <p>
+         Derived from the Sanskrit word Panchakarma means the “five actions” or “five treatments”. This is one of the critical processes in Ayurveda that is used to clean the body of toxic materials. Thanks to the lifestyle we follow our body finds it difficult to get rid of the harmful toxins naturally. Panchakarma treatment does this effectively
+        </p>
+
+        <p>
+An individual’s poor dietary habits, no exercise patterns, lifestyle have changed a lot, and as a result, the hormones and agents which regulate the body’s inherent richness have become redundant. This can lead to the spread of toxins throughout the body resulting in various diseases. The waste matter is known as “ama” in Ayurveda. Ama is a foul-smelling, sticky, harmful fluid that needs to be completely removed from the body.
+        </p>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="panchakarma-right">
+
+        <p>
+          Depending on the needs, all or only parts of the five therapies are utilized. Sometimes two or three of the therapies are linked together to form the basis of the treatment. The five karmas in Panchakarma are:
+        </p>
+
+        <ul>
+          <li>Vaman (vomiting)</li>
+          <li>Virechan (purgation)</li>
+          <li>Basti (enema)</li>
+          <li>Nasya (nasal application)</li>
+          <li>Rakthamoksha (blood purification)</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="therapy-section light">
+  <div class="therapy-container">
+
+    <h2 data-aos="fade-up">VAMAN (VOMITING)</h2>
+
+    <div class="therapy-row">
+
+      <div class="therapy-text" data-aos="fade-up">
+        <p>
+         In this treatment, a patient is given inside and outside oleation and fomentation treatments for few days which includes therapies and some ayurvedic medicines. Once the toxins get melted and accumulate in upper cavities of body, the patient is given emetic medicines and decoction. This enables vomiting and helps in disposing of the poisons from the body tissues. Vaman treatment is particularly suggested basically for kapha-dominated conditions, such as weight gain, asthma and hyperacidity.
+        </p>
+      </div>
+
+      <div class="therapy-img" data-aos="fade-up">
+        <img src="images/panch1.png" alt="">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="therapy-section dark">
+  <div class="therapy-container">
+
+    <h3 data-aos="fade-up">VIRECHAN (PURGATION)</h3>
+
+    <div class="therapy-row reverse">
+
+      <div class="therapy-text" data-aos="fade-up">
+        <p>
+         In virechan, purgation or disposal of toxins happens through the clearing of the bowels. In this treatment too, the patient is given inside and outside oleation and fomentation treatments. From that point onward, the patient is given a natural purgative to encourage clearing of the guts that aides in purifying the body of toxins. Virechan treatment is prescribed fundamentally for pitta -dominated conditions, such as herpes zoster, jaundice , colitis, celiac infection etc.
+        </p>
+      </div>
+
+      <div class="therapy-img" data-aos="fade-up">
+        <img src="images/panch2.png" alt="">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="therapy-section light">
+  <div class="therapy-container">
+
+    <h2 data-aos="fade-up">BASTI (ENEMA)</h2>
+
+    <div class="therapy-row">
+
+      <div class="therapy-text" data-aos="fade-up">
+        <p>
+         Managing medicated substances through enema is Ayurveda’s exceptional commitment to the therapeutic world. The treatment has huge advantages, particularly in convoluted and chronic diseases. According to the nature of disease, home grown decoctions, oils, ghee or milk are managed into the rectum and this has incredible positive effects. This treatment is to a great degree powerful against vata-dominated conditions, such as arthritis, piles and constipation.
+        </p>
+      </div>
+
+      <div class="therapy-img" data-aos="fade-up">
+        <img src="images/panch3.png" alt="">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="therapy-section dark">
+  <div class="therapy-container">
+
+    <h3 data-aos="fade-up">NASYA (NASAL APPLICATION)</h3>
+
+    <div class="therapy-row reverse">
+
+      <div class="therapy-text" data-aos="fade-up">
+        <p>
+          This treatment is extremely effective in clearing and purging the head area. At the beginning of the treatment, the head and shoulder areas are given a delicate massage and fomentation. After that, nasal drops are regulated in both the nostrils. This achieves the cleaning of the whole head area and diminishes different sorts of cerebral pain, headache, hair issues, sleep disorder, neurological disorders, sinusitis, chronic rhinitis and respiratory ailments.
+        </p>
+      </div>
+
+      <div class="therapy-img" data-aos="fade-up">
+        <img src="images/panch4.png" alt="">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="therapy-section light">
+  <div class="therapy-container">
+
+    <h2 data-aos="fade-up">RAKTHAMOKSHA (BLOOD PURIFICATION)</h2>
+
+    <div class="therapy-row">
+
+      <div class="therapy-text" data-aos="fade-up">
+        <p>
+          This treatment is useful for cleaning of blood and viable against ailments caused because of impure blood. It can be done in a particular area or for the whole body. This treatment is especially valuable in different skin infections, such as psoriasis, dermatitis , and furthermore in local lesions such as abscesses and pigmentation.
+        </p>
+      </div>
+
+      <div class="therapy-img" data-aos="fade-up">
+        <img src="images/panch5.png" alt="">
+      </div>
+
+    </div>
+
+  </div>
+</section>
