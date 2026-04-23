@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRIVACY POLICY</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/policy.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+
+
+
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Alovia Logo">
+      </div>
+
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+
+          <li class="has-sub">
+            <a href="about.html">ABOUT US <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="review.html">REVIEWS</a></li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+               <a href="slimming.html">SLIMMING <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li class="has-sub">
+               
+
+                <ul class="sub-menu">
+                  <li><a href="weight-loss-management.html">WEIGHT LOSS MANAGEMENT</a></li>
+                  <li><a href="fat-loss.html">FAT LOSS</a></li>
+                  <li><a href="figure-correction.html">FIGURE CORRECTION</a></li>
+                  <li><a href="body-contouring.html">BODY CONTOURING</a></li>
+                  <li><a href="muscle-toning-and-firming.html">MUSCLE TONING AND FIRMING</a></li>
+                  <li><a href="healthy-diet-advice.html">HEALTHY DIET ADVISE</a></li>
+                  <li><a href= "why-choose-alovia-for-weight-management.html">WHY CHOOSE ALOVIA FOR WEIGHT MANAGEMENT</a></li>
+
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="skin.html">SKIN <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+             
+
+                <ul class="sub-menu">
+                  <li><a href="acne-pimple-treatment.html">ACNE/PIMPLE TREATMENT</a></li>
+                  <li><a href="acne-scar-treatment.html">ACNE SCAR TREATMENT</a></li>
+                  <li><a href="dark-circles-treatment.html">DARK CIRCLES (Under Eye) TREATMENT</a></li>
+                  <li><a href="pigmentation-treatment.html">PIGMENTATION TREATMENT</a></li>
+                  <li><a href="skin-lightening-treatment.html">SKIN LIGHTENING TREATMENT</a></li>
+                  <li><a href="anti-ageing-treatment.html">ANTI AGEING TREATMENT</a></li>
+                  <li><a href="led-light-treatment.html">LED LIGHT TREATMENT</a></li>
+                  <li><a href="stretch-marks-treatment.html">STRETCH MARK TREATMENT</a></li>
+                  <li><a href="fine-lines-winkle-treatment.html">FINE LINES & WRINKLE TREATMENT</a></li>
+                  <li><a href="tattoo-removal.html">TATTOO REMOVAL</a></li>
+                  <li><a href="mole-wart-removal.html">MOLE AND WART REMOVAL</a></li>
+                  <li><a href="medi-facial.html">MEDI-FACIAL</a></li>
+                  <li><a href="semi-permanent-makeup-treatment.html">SEMI-PERMANENT MAKE-UP TREATMENT (Micro-Blading)</a></li>
+                  <li><a href="permanent-makeup-treatment.html">PERMANENT MAKE-UP TREATMENT (BB-Glow)</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="hair.html">HAIR <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="prp-for-hair-loss-treatment.html">Adavnce PRP For Hair Loss Treatment</a></li>
+              <li><a href="hair-regrowth-treatment.html">HAIR REGROWTH TREATMENT</a></li>
+              <li><a href="hair-transplantation.html">HAIR TRANSPLANTATION</a></li>
+              <li><a href="hair-loss-treatment.html">HAIR LOSS TREATMENT</a></li>
+              <li><a href="dandruff.html">DANDRUFF</a></li>
+            </ul>
+          </li>
+
+          <li><a href="laser.html">LASER</a></li>
+
+          <li class="has-sub">
+            <a href="ayurveda.html">AYURVEDA <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="panchakarma.html">PANCHAKARMA</a></li>
+              <li><a href="soundarya-vardhini.html">SOUNDARYA VARDHINI</a></li>
+              <li><a href="specialities.html">SPECIALITIES</a></li>
+              <li><a href="diseases.html">DISEASES</a></li>
+              <li><a href="d-stress.html">D-STRESS</a></li>
+            </ul>
+          </li>
+ <li><a href="physiotherapy.html">PHYSIOTHERAPY</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="payment.html">PAYMENT</a></li>
+        </ul>
+      </nav>
+
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  
+  <section class="hero">
+  </section>
+
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navbar = document.querySelector(".navbar");
+
+    menuToggle.onclick = () => {
+      navbar.classList.toggle("active");
+      const icon = menuToggle.querySelector("i");
+      icon.classList.toggle("fa-bars");
+      icon.classList.toggle("fa-times");
+    };
+
+    document.querySelectorAll(".has-sub > a").forEach(link => {
+      link.addEventListener("click", function (e) {
+        if (window.innerWidth <= 992) {
+          e.preventDefault();
+          const parent = this.parentElement;
+          parent.classList.toggle("open");
+        }
+      });
+    });
+  </script>
+
+
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+  duration: 1000,
+  once: true
+});
+</script>
+
+<section class="privacy-section">
+  <div class="privacy-container">
+
+    <h1 class="privacy-title" data-aos="fade-up">
+      ALOVIA PRIVACY POLICY
+    </h1>
+
+    <div class="privacy-content">
+
+      <p data-aos="fade-up" data-aos-delay="100">
+        All the information provided to us by you, including sensitive personal information, is voluntary. You have the right to withdraw your consent at any time, in accordance with the terms of this User Agreement, but please note that withdrawal of consent will not be retroactive.
+      </p>
+
+      <p data-aos="fade-up" data-aos-delay="200">
+       You can access, modify, correct and eliminate the data about you which has been collected pursuant to your decision to become a user of the Website. If you update any information relating to you, we may keep a copy of the information which you originally provided to us in its archives.
+      </p>
+
+      <p data-aos="fade-up" data-aos-delay="300">
+       The Website uses temporary cookies to store certain data (that is not sensitive personal data or information) that is used by us and our service providers for the technical administration of the Website, research and development, and for administration. In the course of serving advertisements or optimizing services to you, we may allow authorized third parties to place or recognize a unique cookie on your browser. We do not store personally identifiable information in the cookies.
+      </p>
+
+      <p data-aos="fade-up" data-aos-delay="400">
+        We assume no responsibility, and shall not be liable for, any damages to, or viruses that may infect your equipment on account of you access to, use of, or browsing the Website or the downloading of any material, data, text, images, video content, or audio content from the Website. If you are dissatisfied with the Website, your sole remedy is to discontinue using the Website.
+      </p>
+
+      <p data-aos="fade-up" data-aos-delay="500">
+We value the privacy of information pertaining to our associates. The linkage between your IP address and your personally identifiable information is not shared with third-parties without your permission or except when required by law. Notwithstanding the above, we may share some of the aggregate findings and details with advertisers, sponsors, investors, strategic partners, and others in order to help grow our business without obtaining any approval from you. We will enable you to communicate your privacy concerns to us and that we will respond to them appropriately. We do not disclose any personal information to advertisers and for other marketing and promotional purposes that could be used to personally identify you, such as your password, credit card number and bank account number.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer-new" data-aos="fade-up">
+
+  <div class="footer-overlay">
+
+    <div class="footer-container">
+
+      <!-- COLUMN 1 -->
+      <div class="footer-col" data-aos="fade-up">
+        <h3><i class="fa-solid fa-leaf"></i> INFORMATION</h3>
+        <ul>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="privacy-policy.html">PRIVACY POLICY</a></li>
+          <li><a href="terms-conditions.html">TERMS & CONDITIONS</a></li>
+        </ul>
+      </div>
+
+      <!-- COLUMN 2 -->
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+        <h3><i class="fa-solid fa-leaf"></i> REACH US</h3>
+        <p>
+          2-37/74&amp;75/2 CROWN COURT, 2nd FLOOR,
+          PLOT NO: 74 & 75 VINAYAK NAGAR,
+          GACHIBOWLI, HYDERABAD - 500032.
+        </p>
+      </div>
+
+      <!-- COLUMN 3 -->
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+        <h3><i class="fa-solid fa-leaf"></i> CONTACT INFO</h3>
+        <p><strong>EMAIL:</strong><br>info@aloviahc.com</p>
+        <p><strong>CONTACT NUMBER:</strong><br>+91 8297 070 707</p>
+      </div>
+
+      <!-- COLUMN 4 -->
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+        <h3><i class="fa-solid fa-leaf"></i> FOLLOW US ON</h3>
+
+        <div class="social-icons">
+          <a href="https://www.facebook.com/people/Alovia-Health-Care-Hyderabad/100091991834534/"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/alovia_health_care/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/uas/login?session_redirect=%2Fcompany%2F91100156%2F"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://x.com/AloviaHC"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom-new">
+    All Copyrights Reserved @ 2023 Alovia |
+    Powered By
+    <a href="https://nfosoft.com/" target="_blank" class="credit">
+      nfoSoft innovations
+    </a>
+  </div>
+
+</footer>
+
+</body>
+</html>
+
+

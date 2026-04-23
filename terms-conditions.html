@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TERMS AND CONDITIONS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/terms.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+
+
+
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Alovia Logo">
+      </div>
+
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+
+          <li class="has-sub">
+            <a href="about.html">ABOUT US <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="review.html">REVIEWS</a></li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+               <a href="slimming.html">SLIMMING <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li class="has-sub">
+               
+
+                <ul class="sub-menu">
+                  <li><a href="weight-loss-management.html">WEIGHT LOSS MANAGEMENT</a></li>
+                  <li><a href="fat-loss.html">FAT LOSS</a></li>
+                  <li><a href="figure-correction.html">FIGURE CORRECTION</a></li>
+                  <li><a href="body-contouring.html">BODY CONTOURING</a></li>
+                  <li><a href="muscle-toning-and-firming.html">MUSCLE TONING AND FIRMING</a></li>
+                  <li><a href="healthy-diet-advice.html">HEALTHY DIET ADVISE</a></li>
+                  <li><a href= "why-choose-alovia-for-weight-management.html">WHY CHOOSE ALOVIA FOR WEIGHT MANAGEMENT</a></li>
+
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="skin.html">SKIN <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+             
+
+                <ul class="sub-menu">
+                  <li><a href="acne-pimple-treatment.html">ACNE/PIMPLE TREATMENT</a></li>
+                  <li><a href="acne-scar-treatment.html">ACNE SCAR TREATMENT</a></li>
+                  <li><a href="dark-circles-treatment.html">DARK CIRCLES (Under Eye) TREATMENT</a></li>
+                  <li><a href="pigmentation-treatment.html">PIGMENTATION TREATMENT</a></li>
+                  <li><a href="skin-lightening-treatment.html">SKIN LIGHTENING TREATMENT</a></li>
+                  <li><a href="anti-ageing-treatment.html">ANTI AGEING TREATMENT</a></li>
+                  <li><a href="led-light-treatment.html">LED LIGHT TREATMENT</a></li>
+                  <li><a href="stretch-marks-treatment.html">STRETCH MARK TREATMENT</a></li>
+                  <li><a href="fine-lines-winkle-treatment.html">FINE LINES & WRINKLE TREATMENT</a></li>
+                  <li><a href="tattoo-removal.html">TATTOO REMOVAL</a></li>
+                  <li><a href="mole-wart-removal.html">MOLE AND WART REMOVAL</a></li>
+                  <li><a href="medi-facial.html">MEDI-FACIAL</a></li>
+                  <li><a href="semi-permanent-makeup-treatment.html">SEMI-PERMANENT MAKE-UP TREATMENT (Micro-Blading)</a></li>
+                  <li><a href="permanent-makeup-treatment.html">PERMANENT MAKE-UP TREATMENT (BB-Glow)</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <a href="hair.html">HAIR <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="prp-for-hair-loss-treatment.html">Adavnce PRP For Hair Loss Treatment</a></li>
+              <li><a href="hair-regrowth-treatment.html">HAIR REGROWTH TREATMENT</a></li>
+              <li><a href="hair-transplantation.html">HAIR TRANSPLANTATION</a></li>
+              <li><a href="hair-loss-treatment.html">HAIR LOSS TREATMENT</a></li>
+              <li><a href="dandruff.html">DANDRUFF</a></li>
+            </ul>
+          </li>
+
+          <li><a href="laser.html">LASER</a></li>
+
+          <li class="has-sub">
+            <a href="ayurveda.html">AYURVEDA <i class="fas fa-chevron-down arrow"></i></a>
+            <ul class="sub-menu">
+              <li><a href="panchakarma.html">PANCHAKARMA</a></li>
+              <li><a href="soundarya-vardhini.html">SOUNDARYA VARDHINI</a></li>
+              <li><a href="specialities.html">SPECIALITIES</a></li>
+              <li><a href="diseases.html">DISEASES</a></li>
+              <li><a href="d-stress.html">D-STRESS</a></li>
+            </ul>
+          </li>
+ <li><a href="physiotherapy.html">PHYSIOTHERAPY</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="payment.html">PAYMENT</a></li>
+        </ul>
+      </nav>
+
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  
+  <section class="hero">
+  </section>
+
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navbar = document.querySelector(".navbar");
+
+    menuToggle.onclick = () => {
+      navbar.classList.toggle("active");
+      const icon = menuToggle.querySelector("i");
+      icon.classList.toggle("fa-bars");
+      icon.classList.toggle("fa-times");
+    };
+
+    document.querySelectorAll(".has-sub > a").forEach(link => {
+      link.addEventListener("click", function (e) {
+        if (window.innerWidth <= 992) {
+          e.preventDefault();
+          const parent = this.parentElement;
+          parent.classList.toggle("open");
+        }
+      });
+    });
+  </script>
+
+
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+  duration: 1000,
+  once: true
+});
+</script>
+
+
+
+
+
+
+
+
+<section class="terms-section">
+
+  <div class="terms-container">
+
+    <h1 class="terms-title" data-aos="fade-up">
+      TERMS & CONDITIONS
+    </h1>
+
+    <!-- TERMS OF PAYMENT -->
+    <div class="terms-block" data-aos="fade-up">
+      <h3>Terms of payment:-</h3>
+
+      <p>a.a.Payment against bookings of the services intended to be availed by the clients are payable in full in advance at the time of
+booking. Management may at its sole discretion accept token advance amount at the time of booking depending on the
+merit and circumstance of each client.</p>
+
+      <p>b.  All services rendered are subject to levy of statutory taxes, for the time being in force, on the date of payment. Any additional
+tax as may be promulgated/levied/imposed by state/central government will be to the client’s account.</p>
+
+      <p>c.  Services once booked cannot be cancelled.</p>
+    </div>
+
+    <!-- VALIDITY -->
+    <div class="terms-block" data-aos="fade-up" data-aos-delay="100">
+      <h3>Validity of programme :-</h3>
+
+      <p>a. Minimum 8 sessions for females and 10 sessions for males are required to give best results.</p>
+      <p>b. First session shall be taken within 7day/10days from the date of booking depending upon nature of package booking.</p>
+      <p>c.  The counselors will prescribe definite schedule and plan for each package relevant to individual client’s requirements and
+the client are required to follow such advices rigidly failing which are management cannot be held responsible for lack of
+achievement of intended results.</p>
+      <p>d. The management will not refund any amount against booking and/or its services whether availed in full or not by the client
+during the validity of the program me payments received by the company against the services shall deemed to have been
+utilized in full in discharge of the company obligation.
+</p>
+      <p>e.  The validity period as per requirement of the programme for each individual clients is determined and conveyed to individual
+clients, it is the interest of client to seek the requisite services within the validity period of the programme failing which the
+unexecuted programme/package will expire and no services will be rendered against the partly or fully unexecuted
+package.</p>
+    </div>
+
+    <!-- RIGHTS -->
+    <div class="terms-block" data-aos="fade-up" data-aos-delay="200">
+      <h3>Rights and Liabilities of the center:-</h3>
+
+      <p>a. The Management shall have the right to close part or all of the facilities of the center due to repair, renovation, maintenance,
+expansion of facilities or special events without advance notice and to read just the operating hours of the center accordingly.</p>
+      <p>b. The management shall have the right to alert, revoke, supplement or augment its terms and conditions as they see fit shall
+make every effort to inform the clients of all amendments.</p>
+      <p>c. n any event, the maximum over all liability of the management in contract, tort shall be limited to amount paid by the client,
+after adjusting the administrative services charges and all taxes due from the client.</p>
+    </div>
+
+    <!-- LIABILITY -->
+    <div class="terms-block" data-aos="fade-up" data-aos-delay="300">
+      <h3>Liability:-</h3>
+
+      <p>a.  Any person, entering the center and using its facilities does so at its own risk neither the center, not any associated company or
+body, including the centers employees, shall accept responsibility or liability for any injury or loss, including fatality or damage
+whatsoever to any person or their property. Any person who suffers an accident or injury on the center’s premises must report
+the accident or injury, and the circumstances under which it occurred, to the duty manager immediately following the
+accident or injury.</p>
+      <p>b. The management does not accept responsibility or any loss or damage caused to items, valuables (or) personal belongings
+brought into the center and clients do so at their own risk.</p>
+    </div>
+
+    <!-- JURISDICTION -->
+    <div class="terms-block" data-aos="fade-up" data-aos-delay="400">
+      <h3>Jurisdiction:-</h3>
+
+      <p>a.The validity, construction and performances of terms and conditions here in shall be governed by the interpretation in
+accordance with the laws of India and the company and client agree to submit to the exclusive jurisdiction of the Hyderabad
+civil courts.</p>
+    </div>
+
+    <!-- CONDUCT -->
+    <div class="terms-block" data-aos="fade-up" data-aos-delay="500">
+      <h3>Conduct:-</h3>
+
+      <p>a. The management has the right to prevent entering into the center of any our whole behavior/appearance deemed by it to be
+unsuitable or objectionable clients must show consideration for one another in hand in and around the center in particular,
+per fare (or) abusive language and the threat or use of violence will not be tolerated. Clients are not permitted to bring
+personal food and beverages into the center from outside. Personal sound system will not be permitted into the center.</p>
+    
+    </div>
+
+    <!-- FINAL TERMS -->
+    <div class="terms-block" data-aos="fade-up" data-aos-delay="600">
+      <h3>Terms & Conditions:</h3>
+
+      <ul class="terms-list">
+        <li>Services listed on the invoice will only be executed. Handwritten commitments will not be entertained.</li>
+        <li>Refunds not allowed.</li>
+        <li>Services are not transferable.</li>
+        <li>Services have to be utilized within the package validity period Retain the invoice for the future Reference</li>
+        <li>Subject to Hyderabad jurisdiction only.</li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer-new" data-aos="fade-up">
+
+  <div class="footer-overlay">
+
+    <div class="footer-container">
+
+      <!-- COLUMN 1 -->
+      <div class="footer-col" data-aos="fade-up">
+        <h3><i class="fa-solid fa-leaf"></i> INFORMATION</h3>
+        <ul>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="privacy-policy.html">PRIVACY POLICY</a></li>
+          <li><a href="terms-conditions.html">TERMS & CONDITIONS</a></li>
+        </ul>
+      </div>
+
+      <!-- COLUMN 2 -->
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+        <h3><i class="fa-solid fa-leaf"></i> REACH US</h3>
+        <p>
+          2-37/74&amp;75/2 CROWN COURT, 2nd FLOOR,
+          PLOT NO: 74 & 75 VINAYAK NAGAR,
+          GACHIBOWLI, HYDERABAD - 500032.
+        </p>
+      </div>
+
+      <!-- COLUMN 3 -->
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+        <h3><i class="fa-solid fa-leaf"></i> CONTACT INFO</h3>
+        <p><strong>EMAIL:</strong><br>info@aloviahc.com</p>
+        <p><strong>CONTACT NUMBER:</strong><br>+91 8297 070 707</p>
+      </div>
+
+      <!-- COLUMN 4 -->
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+        <h3><i class="fa-solid fa-leaf"></i> FOLLOW US ON</h3>
+
+        <div class="social-icons">
+          <a href="https://www.facebook.com/people/Alovia-Health-Care-Hyderabad/100091991834534/"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/alovia_health_care/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/uas/login?session_redirect=%2Fcompany%2F91100156%2F"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://x.com/AloviaHC"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom-new">
+    All Copyrights Reserved @ 2023 Alovia |
+    Powered By
+    <a href="https://nfosoft.com/" target="_blank" class="credit">
+      nfoSoft innovations
+    </a>
+  </div>
+
+</footer>
+
+</body>
+</html>
+
